@@ -34,7 +34,7 @@ export default function ProcessPage() {
           {PROCESS_STEPS.map((step, i) => (
             <Reveal key={step.title} delay={0.05 * i}>
               <li className="relative flex gap-6 py-8 sm:gap-9">
-                <span className="relative z-10 grid h-[3.3rem] w-[3.3rem] shrink-0 place-items-center rounded-4xl border border-brand/40 bg-mist text-brand shadow-[0_0_0_6px] shadow-mist dark:bg-ink dark:shadow-ink sm:h-[4.3rem] sm:w-[4.3rem]">
+                <span className="relative z-10 grid h-[3.3rem] w-[3.3rem] shrink-0 place-items-center rounded-4xl border border-brand/40 bg-mist text-brand shadow-[0_0_0_6px] shadow-mist dark:bg-black dark:shadow-black sm:h-[4.3rem] sm:w-[4.3rem]">
                   <Icon name={step.icon as "chat"} size={24} />
                 </span>
                 <div className="pt-1">

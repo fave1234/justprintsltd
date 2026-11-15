@@ -8,14 +8,7 @@
 
 // ─── Portfolio ───────────────────────────────────────────────
 
-export const PROJECT_CATEGORIES = [
-  "All",
-  "Books",
-  "Branding",
-  "Event Materials",
-  "Corporate",
-  "Other",
-] as const;
+export const PROJECT_CATEGORIES = ["All", "Books", "Other"] as const;
 
 export type ProjectCategory = (typeof PROJECT_CATEGORIES)[number];
 
@@ -37,230 +30,232 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
   {
-    slug: "the-stillwater-memoirs",
-    title: "The Stillwater Memoirs",
+    slug: "women-without-walls",
+    title: "Women Without Walls",
     category: "Books",
     year: "2026",
+    client: "Katherine Chukwujama",
     summary:
-      "A 320-page hardcover memoir — Smyth-sewn binding, red foil-debossed cover and printed endpapers.",
+      "Katherine Chukwujama's author edition — cover to bound copies, with the Justprints imprint on the back.",
     description: [
-      "A family history deserved more than a paperback. For this memoir we chose a case-bound hardcover with Smyth-sewn signatures, so the book opens flat and will outlive generations of readers.",
-      "The cover is a deep crimson Wibalin with a blind deboss and red foil title; inside, 100gsm cream uncoated stock keeps long-form reading easy on the eyes. Every copy passed a 21-point finishing check before leaving the press.",
+      "Women Without Walls — “Rise above challenges and thrive in all ramifications” — came in as a manuscript and left as a finished book. Cover design, interior layout and binding were all handled under one roof.",
+      "Every copy passed our finishing inspection before delivery. The back cover carries the Justprints imprint beside the book's ISBN — our mark on a title we're proud of.",
     ],
     services: ["Book Printing & Publishing", "Graphic Design"],
     cover: {
-      src: "/images/work/stillwater.jpg",
-      alt: "Crimson hardcover memoir with red foil title, photographed on a dark table",
-    },
-    gallery: [
-      {
-        src: "/images/textures/foil.jpg",
-        alt: "Macro close-up of red foil stamping on black book cloth",
-      },
-      {
-        src: "/images/textures/binding.jpg",
-        alt: "Close-up of Smyth-sewn thread binding in a hardcover book block",
-      },
-      {
-        src: "/images/textures/paper.jpg",
-        alt: "Stack of cream uncoated paper sheets showing deckled edges",
-      },
-    ],
-    featured: true,
-  },
-  {
-    slug: "echoes-of-the-ancestors",
-    title: "Echoes of the Ancestors",
-    category: "Books",
-    year: "2026",
-    summary:
-      "A poetry collection in perfect-bound paperback — soft-touch laminate, French flaps and a kraft-textured cover.",
-    description: [
-      "Poetry deserves tactility. This collection pairs a kraft-textured cover stock with soft-touch lamination and French flaps — details usually reserved for books twice the budget.",
-      "Interior typesetting was handled in-house: generous margins, a quiet serif, and section openers printed in a single spot red.",
-    ],
-    services: ["Book Printing & Publishing", "Graphic Design"],
-    cover: {
-      src: "/images/work/echoes.jpg",
-      alt: "Cream poetry book with kraft-textured cover lying beside loose manuscript pages",
-    },
-    gallery: [
-      {
-        src: "/images/textures/paper.jpg",
-        alt: "Close-up of natural kraft-toned paper texture",
-      },
-      {
-        src: "/images/textures/binding.jpg",
-        alt: "Detail of a book spine showing neat binding work",
-      },
-    ],
-    featured: true,
-  },
-  {
-    slug: "amara-gold-cosmetics",
-    title: "Amara Gold Cosmetics",
-    category: "Branding",
-    year: "2026",
-    summary:
-      "Complete identity for a beauty brand — wordmark, colour system, stationery and packaging labels with gold-foil detailing.",
-    description: [
-      "Amara Gold needed an identity that felt premium on a shelf and unforgettable in the hand. We built a restrained black-and-red system with gold foil accents, then carried it through cards, letterheads, labels and gift boxes.",
-      "The packaging run used 350gsm art board with matte lamination and a metallic gold foil — proof that small print runs can still feel luxurious.",
-    ],
-    services: ["Branding & Identity", "Graphic Design", "General Commercial Printing"],
-    cover: {
-      src: "/images/work/amara.jpg",
-      alt: "Flat lay of black and red brand stationery with gold foil logo details",
-    },
-    gallery: [
-      {
-        src: "/images/textures/foil.jpg",
-        alt: "Macro of metallic foil catching light on a printed card",
-      },
-      {
-        src: "/images/textures/paper.jpg",
-        alt: "Stacked luxury packaging board samples",
-      },
-    ],
-    featured: true,
-  },
-  {
-    slug: "coal-city-coffee-roasters",
-    title: "Coal City Coffee Roasters",
-    category: "Branding",
-    year: "2025",
-    summary:
-      "Naming, identity and packaging for an Enugu coffee roaster — kraft bags, stamped labels and loyalty cards.",
-    description: [
-      "Named after Enugu's coal heritage, Coal City Coffee asked for a brand as warm as its roast. We delivered a full identity — logotype, palette, iconography — plus printed kraft pouches with stamped red labels.",
-      "The loyalty cards, printed on recycled 400gsm stock with deep debossing, turn every cup into a keepsake.",
-    ],
-    services: ["Branding & Identity", "General Commercial Printing"],
-    cover: {
-      src: "/images/work/coalcity.jpg",
-      alt: "Kraft coffee bags with red labels beside spilling roasted coffee beans",
-    },
-    gallery: [
-      {
-        src: "/images/textures/paper.jpg",
-        alt: "Kraft paper texture used for the coffee packaging",
-      },
-      {
-        src: "/images/textures/foil.jpg",
-        alt: "Stamped red label detail close-up",
-      },
-    ],
-  },
-  {
-    slug: "enugu-tech-summit-2026",
-    title: "Enugu Tech Summit 2026",
-    category: "Event Materials",
-    year: "2026",
-    summary:
-      "Full event branding — 20-ft stage backdrop, roll-up banners, badges, programmes and wayfinding signage.",
-    description: [
-      "One week before doors opened, the summit needed everything: a six-metre stage backdrop, twelve roll-up banners, 800 badges, programmes, lanyards and wayfinding — all colour-matched across substrates.",
-      "We printed, finished and delivered on schedule, with on-site support through setup morning. Large format doesn't rattle us; it excites us.",
-    ],
-    services: ["Event Branding & Large Format", "Graphic Design"],
-    cover: {
-      src: "/images/work/techsummit.jpg",
-      alt: "Conference stage with bold printed red and black backdrop branding",
+      src: "/images/work/women-without-walls.jpg",
+      alt: "Front and back cover of Women Without Walls by Katherine Chukwujama",
     },
     gallery: [
       {
         src: "/images/about/workspace.jpg",
-        alt: "Large-format press operator checking colour at the machine",
+        alt: "Press operators running a colour job at the Justprints press room",
       },
-      {
-        src: "/images/textures/foil.jpg",
-        alt: "Close-up of premium finish on printed event badge",
-      },
-    ],
-    featured: true,
-  },
-  {
-    slug: "a-royal-heritage-wedding",
-    title: "A Royal Heritage Wedding",
-    category: "Event Materials",
-    year: "2025",
-    summary:
-      "Luxury invitation suite — crimson foil on cotton card, blind embossing, wax seals, in presentation boxes.",
-    description: [
-      "When a couple says they want guests to gasp, we take it literally. This suite layers 600gsm cotton card, crimson foil calligraphy and a blind-embossed family crest, finished with hand-poured wax seals.",
-      "Each invitation ships in its own rigid presentation box — print as the first gift of the celebration.",
-    ],
-    services: ["Event Branding & Large Format", "General Commercial Printing"],
-    cover: {
-      src: "/images/work/wedding.jpg",
-      alt: "Crimson and cream wedding invitation suite with wax seal and foil details",
-    },
-    gallery: [
-      {
-        src: "/images/textures/foil.jpg",
-        alt: "Crimson foil detail on cotton invitation card",
-      },
-      {
-        src: "/images/textures/paper.jpg",
-        alt: "Cotton card stock edges in a wedding stationery stack",
-      },
-    ],
-  },
-  {
-    slug: "plusfrica-group-annual-report",
-    title: "PlusFrica Group Annual Report",
-    category: "Corporate",
-    year: "2026",
-    client: "PlusFrica Group",
-    summary:
-      "A 96-page section-sewn annual report — lay-flat binding, spot-colour charts and a linen-textured cover.",
-    description: [
-      "An annual report is a company's handshake in print. For our parent group we produced a 96-page section-sewn edition that lies flat on the boardroom table, with financial charts printed in a precise spot red.",
-      "The linen-textured cover and rounded spine give it the gravity of a bound journal — a document worth keeping, not binning.",
-    ],
-    services: ["General Commercial Printing", "Graphic Design"],
-    cover: {
-      src: "/images/work/plusfrica-report.jpg",
-      alt: "Elegant black annual report with red accents on a boardroom table",
-    },
-    gallery: [
       {
         src: "/images/textures/binding.jpg",
-        alt: "Section-sewn spine detail of the annual report",
-      },
-      {
-        src: "/images/textures/paper.jpg",
-        alt: "Interior paper stock close-up",
+        alt: "Close-up of thread binding in a book block",
       },
     ],
     featured: true,
   },
   {
-    slug: "zenith-point-logistics",
-    title: "Zenith Point Logistics",
-    category: "Corporate",
-    year: "2025",
+    slug: "brain-bank",
+    title: "Brain Bank",
+    category: "Books",
+    year: "2026",
+    client: "Katherine Chukwujama",
     summary:
-      "Corporate stationery system — letterheads, cards, envelopes and fleet decals in a disciplined red-on-black system.",
+      "Unlocking the power of mental wealth — Katherine Chukwujama's paperback, from cover artwork to bound run.",
     description: [
-      "Zenith Point asked for one thing: consistency. We produced a complete stationery system — letterheads, business cards, envelopes, delivery notes — governed by a printed mini brand guide.",
-      "Durable vinyl fleet decals extended the identity onto every truck, turning the motorway into a moving billboard.",
+      "Brain Bank is built on one idea: your mind is an asset. Its money-brain cover made the point before a page was opened — and kept the bindery honest on a dense black wrap.",
+      "The wraparound cover — back, spine and front — was set as a single piece, so the author's portrait and bio sit exactly where they should.",
     ],
-    services: ["General Commercial Printing", "Branding & Identity"],
+    services: ["Book Printing & Publishing", "Graphic Design"],
     cover: {
-      src: "/images/work/zenith.jpg",
-      alt: "Stack of corporate business cards and letterheads in black and red",
+      src: "/images/work/brain-bank.jpg",
+      alt: "Brain Bank by Katherine Chukwujama — money-filled brain artwork on a black cover",
     },
     gallery: [
       {
-        src: "/images/textures/foil.jpg",
-        alt: "Red foil edge detail on business cards",
+        src: "/images/about/workspace.jpg",
+        alt: "Colour being checked on press at the Justprints press room",
       },
       {
         src: "/images/textures/paper.jpg",
-        alt: "Letterhead paper stock macro",
+        alt: "Close-up of uncoated book paper stock",
       },
     ],
+    featured: true,
+  },
+  {
+    slug: "the-new-you",
+    title: "The New You",
+    category: "Books",
+    year: "2026",
+    client: "Sam Iheanacho",
+    summary:
+      "Designing Your Perfect Future — Sam Iheanacho's paperback, printed with the Justprints imprint on the back cover.",
+    description: [
+      "Lead pastor and management consultant Sam Iheanacho brought us The New You — interior pages, cover and finishing, end to end.",
+      "The back cover carries our imprint: a mark we only put on books we're proud of.",
+    ],
+    services: ["Book Printing & Publishing", "Graphic Design"],
+    cover: {
+      src: "/images/work/the-new-you.jpg",
+      alt: "Front and back cover of The New You by Sam Iheanacho",
+    },
+    gallery: [
+      {
+        src: "/images/about/workspace.jpg",
+        alt: "The Justprints press room mid-production",
+      },
+      {
+        src: "/images/textures/binding.jpg",
+        alt: "Binding detail on a finished book block",
+      },
+    ],
+    featured: true,
+  },
+  {
+    slug: "from-novice-to-top-selling-realtor",
+    title: "From Novice to Top Selling Realtor",
+    category: "Books",
+    year: "2026",
+    client: "Jeff Anozie",
+    summary:
+      "Jeff Anozie's guide to building a real-estate marketing business in Nigeria — a full paperback run, trimmed and boxed.",
+    description: [
+      "From Novice to Top Selling Realtor is Jeff Anozie's field manual for property sales in Nigeria — typeset, printed and perfect-bound at our press.",
+      "The finished run left the bindery stacked and boxed — ready for readers, trainings and signing tables.",
+    ],
+    services: ["Book Printing & Publishing", "Graphic Design"],
+    cover: {
+      src: "/images/work/from-novice-to-top-selling-realtor.jpg",
+      alt: "From Novice to Top Selling Realtor by Jeff Anozie — paperback covers",
+    },
+    gallery: [
+      {
+        src: "/images/about/workspace.jpg",
+        alt: "Operators at the large-format press in the Justprints press room",
+      },
+      {
+        src: "/images/textures/paper.jpg",
+        alt: "Book paper sheets ready for the press",
+      },
+    ],
+    featured: true,
+  },
+  {
+    slug: "ilead",
+    title: "iLead",
+    category: "Books",
+    year: "2026",
+    client: "Solomon Umezude, Solomon C. Okeke & Gideon C. Okeke",
+    summary:
+      "Basic leadership tools for emerging leaders — a co-authored paperback with a marble-and-gold cover.",
+    description: [
+      "Three authors, one book: iLead gathers leadership lessons from Solomon Umezude, Solomon C. Okeke and Gideon C. Okeke — the “Meet the Authors” spread was typeset in-house along with the full interior.",
+      "The bright gold cover art was colour-checked against an approved proof before the run went to press.",
+    ],
+    services: ["Book Printing & Publishing", "Graphic Design"],
+    cover: {
+      src: "/images/work/ilead.jpg",
+      alt: "iLead — Basic leadership tools for emerging leaders, with chess-piece cover",
+    },
+    gallery: [
+      {
+        src: "/images/about/workspace.jpg",
+        alt: "The Justprints press room during production",
+      },
+      {
+        src: "/images/textures/foil.jpg",
+        alt: "Gold detail on a printed cover, close-up",
+      },
+    ],
+  },
+  {
+    slug: "when-purpose-meets-people",
+    title: "When Purpose Meets People",
+    category: "Books",
+    year: "2026",
+    client: "Uzor Jonathan",
+    summary:
+      "Uzor Jonathan's paperback run — off press, shrink-wrapped in sets and boxed for distribution.",
+    description: [
+      "When Purpose Meets People — “Harnessing the Treasures of Strategic Relationships” — went from press to bindery to shrink-wrapped stacks, ready for Uzor Jonathan's readers.",
+      "The monochrome cover is dense black and fine detail. The photo shows the result better than we could describe it.",
+    ],
+    services: ["Book Printing & Publishing"],
+    cover: {
+      src: "/images/work/when-purpose-meets-people.jpg",
+      alt: "Shrink-wrapped copies of When Purpose Meets People by Uzor Jonathan",
+    },
+    gallery: [
+      {
+        src: "/images/about/workspace.jpg",
+        alt: "Printing under way at the Justprints press room",
+      },
+      {
+        src: "/images/textures/binding.jpg",
+        alt: "Trimmed and bound book blocks, close-up",
+      },
+    ],
+  },
+  {
+    slug: "youre-easy-to-ignore",
+    title: "You're Easy to Ignore",
+    category: "Books",
+    year: "2026",
+    client: "Jeff Anozie",
+    summary:
+      "Jeff Anozie's title at its author launch — the finished book, in the author's hands.",
+    description: [
+      "At the launch of You're Easy to Ignore, Jeff Anozie held the finished copy up for the cameras — the same edition our press produced.",
+      "A book launch is where print quality meets its audience. This one arrived on time and on brief.",
+    ],
+    services: ["Book Printing & Publishing"],
+    cover: {
+      src: "/images/work/youre-easy-to-ignore.jpg",
+      alt: "Jeff Anozie holding a copy of You're Easy to Ignore at the book launch",
+    },
+    gallery: [
+      {
+        src: "/images/about/workspace.jpg",
+        alt: "The Justprints press room, where the edition was produced",
+      },
+      {
+        src: "/images/textures/paper.jpg",
+        alt: "Uncoated book paper, close-up",
+      },
+    ],
+  },
+  {
+    slug: "campaign-caps",
+    title: "Campaign Caps",
+    category: "Other",
+    year: "2026",
+    summary:
+      "Full-colour branded caps for a political campaign — merchandise produced alongside our large-format work.",
+    description: [
+      "Campaign merchandise has one rule: it must read clearly from across the street. These caps carry a bold, high-contrast mark on white.",
+      "Merchandise sits alongside our banners and event materials — small items, produced to the same standard.",
+    ],
+    services: ["Event Branding & Large Format"],
+    cover: {
+      src: "/images/work/campaign-caps.jpg",
+      alt: "White branded campaign caps produced by Justprints",
+    },
+    gallery: [
+      {
+        src: "/images/about/workspace.jpg",
+        alt: "Production under way at the Justprints press room",
+      },
+      {
+        src: "/images/textures/foil.jpg",
+        alt: "Close-up of a branded print finish",
+      },
+    ],
+    featured: true,
   },
 ];
 
@@ -300,8 +295,8 @@ export const SERVICES: Service[] = [
       "Special finishes — foil, embossing, sprayed edges",
     ],
     image: {
-      src: "/images/work/stillwater.jpg",
-      alt: "Premium hardcover book printed by Justprints",
+      src: "/images/work/women-without-walls.jpg",
+      alt: "Women Without Walls — a title printed and bound by Justprints",
     },
   },
   {
@@ -322,7 +317,7 @@ export const SERVICES: Service[] = [
     ],
     image: {
       src: "/images/insights/prepress.jpg",
-      alt: "Designer preparing print-ready artwork on screen with colour proofs",
+      alt: "Press operators checking colour at the Justprints press room",
     },
   },
   {
@@ -384,8 +379,8 @@ export const SERVICES: Service[] = [
       "Branded souvenirs & gift items",
     ],
     image: {
-      src: "/images/work/techsummit.jpg",
-      alt: "Large-format stage backdrop printed for a conference by Justprints",
+      src: "/images/work/campaign-caps.jpg",
+      alt: "Branded campaign caps produced by Justprints",
     },
   },
 ];
@@ -454,14 +449,14 @@ export const PROCESS_STEPS = [
   },
 ] as const;
 
-// ─── Testimonials (PLACEHOLDER — replace with real quotes) ───
+// ─── Testimonials (first entry real — client review via WhatsApp;
+//     remainder PLACEHOLDER, replace as real quotes arrive) ───
 
 export const TESTIMONIALS = [
   {
-    quote:
-      "The moment I held my book, I understood the difference. The binding, the paper, the colour — everything felt intentional. My readers keep asking who printed it.",
-    name: "Adaeze N.",
-    role: "Author, Enugu",
+    quote: "The journal is beautifully good and well illustrated. Well done. Thank you.",
+    name: "Journal client",
+    role: "WhatsApp review",
   },
   {
     quote:
@@ -577,7 +572,7 @@ Because "I thought it would be redder" is a sentence nobody should have to say.`
     readTime: "6 min read",
     cover: {
       src: "/images/insights/prepress.jpg",
-      alt: "Designer checking print-ready artwork, bleed guides and colour proofs on screen",
+      alt: "Press operators reviewing a fresh print at the Justprints press room",
     },
     body: `Most print disasters don't happen on the press. They happen at export — a missing bleed, a low-resolution photo, a font that never made the trip. Here's the plain-English checklist we wish every client laminated to their desk.
 

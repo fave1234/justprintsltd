@@ -67,7 +67,7 @@ export default function AboutPage() {
           {ABOUT_STATS.map((stat) => (
             <div
               key={stat.label}
-              className="flex flex-col items-center gap-1.5 bg-mist px-4 py-9 text-center dark:bg-ink"
+              className="flex flex-col items-center gap-1.5 bg-mist px-4 py-9 text-center dark:bg-ink-soft"
             >
               <dt className="order-2 text-xs font-semibold uppercase tracking-[0.18em] text-steel">
                 {stat.label}
@@ -91,7 +91,7 @@ export default function AboutPage() {
           <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {VALUES.map((v, i) => (
               <Reveal key={v.title} delay={i * 0.08}>
-                <article className="flex h-full flex-col gap-4 rounded-4xl border border-line-light bg-mist p-7 dark:border-line-dark dark:bg-ink">
+                <article className="flex h-full flex-col gap-4 rounded-4xl border border-line-light bg-mist p-7 dark:border-line-dark dark:bg-black">
                   <span className="grid h-12 w-12 place-items-center rounded-xl bg-brand/10 text-brand">
                     <Icon name={v.icon as "gem"} size={22} />
                   </span>

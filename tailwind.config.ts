@@ -4,7 +4,7 @@ import type { Config } from "tailwindcss";
  * Design tokens — Justprints by PlusFrica × Monzo-style reference
  * ──────────────────────────────────────────────────────────────
  * · Light-first: Page Mist canvas → white cards → Soft Mint fills
- *   (dark theme = Midnight Ink surfaces; toggle persisted)
+ *   (dark theme = pitch-black canvas; toggle persisted)
  * · Brand red #EB3A34 is an ACCENT ONLY — logo, links, icons,
  *   hairline highlights. Never a button fill / control surface.
  * · Type: Inter (text, -0.05em) + Manrope (display, 700–800)
@@ -37,7 +37,7 @@ const config: Config = {
         },
         ink: {
           DEFAULT: "#091723", // Midnight Ink — text + primary dark pills (light theme)
-          soft: "#112231", // Deep Navy — dark-theme card surface
+          soft: "#0C1217", // Near-black — dark-theme card surface on pitch black
           mute: "#3B4C54", // Slate — strong body text
         },
         mist: {
@@ -52,7 +52,7 @@ const config: Config = {
         },
         line: {
           light: "#E3EBE4",
-          dark: "#22313D",
+          dark: "#1E2630", // hairlines on pitch black
         },
       },
       fontFamily: {
