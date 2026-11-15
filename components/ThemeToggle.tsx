@@ -18,7 +18,7 @@ export default function ThemeToggle({ className = "" }: { className?: string }) 
       type="button"
       aria-label={mounted ? `Switch to ${isDark ? "light" : "dark"} theme` : "Toggle theme"}
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className={`relative inline-flex h-10 w-10 items-center justify-center rounded-full border border-line-light text-ink-mute transition-colors duration-300 hover:border-brand hover:text-brand dark:border-line-dark dark:text-paper ${className}`}
+      className={`relative inline-flex h-10 w-10 items-center justify-center rounded-full border border-line-light text-ink-mute transition-colors duration-300 hover:border-brand hover:text-brand dark:border-line-dark dark:text-mist ${className}`}
     >
       {/* Reserve space before mount to avoid layout shift / hydration flash */}
       <span className={mounted ? "hidden" : "block h-5 w-5"} />

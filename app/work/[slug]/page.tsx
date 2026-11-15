@@ -53,7 +53,7 @@ export default async function ProjectPage({
           <Reveal>
             <Link
               href="/work"
-              className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-smoke transition-colors hover:text-brand"
+              className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-steel transition-colors hover:text-brand"
             >
               <Icon name="arrowRight" size={15} className="rotate-180" />
               Back to all work
@@ -64,19 +64,19 @@ export default async function ProjectPage({
               <p className="eyebrow mb-4">
                 {project.category} · {project.year}
               </p>
-              <h1 className="font-display text-4xl font-semibold leading-[1.06] tracking-tightest text-ink dark:text-paper sm:text-5xl lg:text-6xl">
+              <h1 className="font-display text-4xl font-extrabold leading-[1.06] tracking-normal text-ink dark:text-mist sm:text-5xl lg:text-6xl">
                 {project.title}
               </h1>
             </Reveal>
             <Reveal delay={0.12}>
-              <p className="text-lg leading-relaxed text-smoke-dark dark:text-smoke-light">
+              <p className="text-lg leading-relaxed text-steel-dark dark:text-steel-light">
                 {project.summary}
               </p>
               <ul className="mt-5 flex flex-wrap gap-2">
                 {project.services.map((s) => (
                   <li
                     key={s}
-                    className="rounded-full border border-line-light px-3.5 py-1.5 text-xs font-medium text-ink-mute dark:border-line-dark dark:text-paper/75"
+                    className="rounded-full border border-line-light px-3.5 py-1.5 text-xs font-medium text-ink-mute dark:border-line-dark dark:text-mist/75"
                   >
                     {s}
                   </li>
@@ -90,7 +90,7 @@ export default async function ProjectPage({
       {/* Cover image */}
       <section className="container-site">
         <Reveal>
-          <div className="relative aspect-[16/9] overflow-hidden rounded-3xl bg-ink-mute">
+          <div className="relative aspect-[16/9] overflow-hidden rounded-5xl bg-mist-soft">
             <Image
               src={project.cover.src}
               alt={project.cover.alt}
@@ -108,13 +108,13 @@ export default async function ProjectPage({
         <div className="container-site grid gap-14 lg:grid-cols-[0.9fr_1.1fr]">
           <Reveal>
             <div className="flex max-w-xl flex-col gap-6">
-              <h2 className="font-display text-3xl font-semibold tracking-tightest text-ink dark:text-paper">
+              <h2 className="font-display text-3xl font-extrabold tracking-normal text-ink dark:text-mist">
                 Behind the piece
               </h2>
               {project.description.map((para, i) => (
                 <p
                   key={i}
-                  className="leading-relaxed text-smoke-dark dark:text-smoke-light"
+                  className="leading-relaxed text-steel-dark dark:text-steel-light"
                 >
                   {para}
                 </p>
@@ -146,7 +146,7 @@ export default async function ProjectPage({
             {project.gallery.map((img, i) => (
               <Reveal key={img.src + i} delay={i * 0.08}>
                 <div
-                  className={`relative overflow-hidden rounded-2xl bg-ink-mute ${
+                  className={`relative overflow-hidden rounded-4xl bg-mist-soft ${
                     i === 0 ? "aspect-[3/4] sm:row-span-2 sm:h-full sm:min-h-[32rem]" : "aspect-[4/3]"
                   }`}
                 >
@@ -174,10 +174,10 @@ export default async function ProjectPage({
             href={`/work/${prev.slug}`}
             className="group flex flex-col gap-2 border-b border-line-light py-10 transition-colors sm:border-b-0 sm:border-r sm:pr-8 dark:border-line-dark"
           >
-            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-smoke transition-colors group-hover:text-brand">
+            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-steel transition-colors group-hover:text-brand">
               <Icon name="chevronLeft" size={14} /> Previous project
             </span>
-            <span className="font-display text-2xl font-semibold tracking-tight text-ink transition-colors group-hover:text-brand dark:text-paper">
+            <span className="font-display text-2xl font-extrabold tracking-tight text-ink transition-colors group-hover:text-brand dark:text-mist">
               {prev.title}
             </span>
           </Link>
@@ -185,10 +185,10 @@ export default async function ProjectPage({
             href={`/work/${next.slug}`}
             className="group flex flex-col items-start gap-2 py-10 text-left transition-colors sm:items-end sm:pl-8 sm:text-right"
           >
-            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-smoke transition-colors group-hover:text-brand">
+            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-steel transition-colors group-hover:text-brand">
               Next project <Icon name="chevronRight" size={14} />
             </span>
-            <span className="font-display text-2xl font-semibold tracking-tight text-ink transition-colors group-hover:text-brand dark:text-paper">
+            <span className="font-display text-2xl font-extrabold tracking-tight text-ink transition-colors group-hover:text-brand dark:text-mist">
               {next.title}
             </span>
           </Link>

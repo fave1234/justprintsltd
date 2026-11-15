@@ -4,10 +4,7 @@ import { useState } from "react";
 import Icon from "./Icon";
 import { SITE, trackEvent } from "@/lib/site";
 
-/**
- * Simple newsletter signup. Posts to Formspree if configured, otherwise
- * falls back to a pre-filled email to Justprints so nothing is ever lost.
- */
+/** Newsletter signup → Formspree when configured, else a pre-filled email. */
 export default function NewsletterForm() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "done">("idle");
@@ -47,9 +44,9 @@ export default function NewsletterForm() {
 
   if (status === "done") {
     return (
-      <p className="flex items-center gap-2 text-sm text-brand">
+      <p className="flex items-center gap-2 text-sm font-semibold text-brand">
         <Icon name="check" size={16} />
-        Thank you — you’re on the list.
+        You’re on the list.
       </p>
     );
   }
@@ -57,9 +54,9 @@ export default function NewsletterForm() {
   return (
     <form onSubmit={handleSubmit} className="flex max-w-xs flex-col gap-3">
       <label htmlFor="newsletter-email" className="eyebrow">
-        Print Notes — our newsletter
+        Print notes
       </label>
-      <div className="flex overflow-hidden rounded-full border border-line-light transition-colors focus-within:border-brand dark:border-line-dark">
+      <div className="flex overflow-hidden rounded-full border border-line-light transition-colors focus-within:border-ink dark:border-line-dark dark:focus-within:border-mist/40">
         <input
           id="newsletter-email"
           type="email"
@@ -67,13 +64,13 @@ export default function NewsletterForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="you@example.com"
-          className="h-11 w-full bg-transparent px-4 text-sm text-ink placeholder:text-smoke focus:outline-none dark:text-paper"
+          className="h-11 w-full bg-transparent px-4 text-sm text-ink placeholder:text-steel-light focus:outline-none dark:text-mist"
         />
         <button
           type="submit"
           disabled={status === "sending"}
-          aria-label="Subscribe to the newsletter"
-          className="grid h-11 w-12 shrink-0 place-items-center bg-brand text-white transition-colors hover:bg-brand-600 disabled:opacity-60"
+          aria-label="Subscribe"
+          className="grid h-11 w-12 shrink-0 place-items-center bg-ink text-white transition-colors hover:bg-ink-mute disabled:opacity-60 dark:bg-mist-white dark:text-ink"
         >
           <Icon name="send" size={16} />
         </button>

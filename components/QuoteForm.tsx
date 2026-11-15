@@ -19,7 +19,7 @@ const TIMELINES = [
 type Status = "idle" | "sending" | "success" | "error";
 
 const inputCls =
-  "w-full rounded-xl border border-line-light bg-paper-white px-4 py-3.5 text-[0.95rem] text-ink placeholder:text-smoke transition-colors focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30 dark:border-line-dark dark:bg-ink-soft dark:text-paper";
+  "w-full rounded-3xl border border-line-light bg-mist-white px-4 py-3.5 text-[0.95rem] text-ink placeholder:text-steel-light transition-colors focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30 dark:border-line-dark dark:bg-ink-soft dark:text-mist";
 
 /**
  * Quote request form → Formspree email notification when configured,
@@ -94,17 +94,17 @@ export default function QuoteForm({ initialType }: { initialType?: string }) {
 
   if (status === "success") {
     return (
-      <div className="flex flex-col items-start gap-5 rounded-2xl border border-brand/40 bg-brand/5 p-8 dark:bg-brand/10">
+      <div className="flex flex-col items-start gap-5 rounded-4xl border border-brand/40 bg-brand/5 p-8 dark:bg-brand/10">
         <span className="grid h-12 w-12 place-items-center rounded-full bg-brand text-white">
           <Icon name="check" size={22} />
         </span>
-        <h3 className="font-display text-2xl font-semibold tracking-tight text-ink dark:text-paper">
+        <h3 className="font-display text-2xl font-extrabold text-ink dark:text-mist">
           Your brief is on its way.
         </h3>
-        <p className="leading-relaxed text-smoke-dark dark:text-smoke-light">
+        <p className="leading-relaxed text-steel-dark dark:text-steel-light">
           {formspreeId
-            ? "We’ve received your request and will reply within one business day."
-            : "We opened WhatsApp with your project brief pre-filled — just hit send. We typically reply within the hour."}
+            ? "We reply within one business day — usually much faster."
+            : "WhatsApp just opened with your brief pre-filled. Hit send and we’ll take it from there."}
         </p>
         <div className="flex flex-wrap gap-3">
           <Button variant="outline" size="sm" onClick={() => setStatus("idle")}>
@@ -132,7 +132,7 @@ export default function QuoteForm({ initialType }: { initialType?: string }) {
     >
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor="q-name" className="mb-2 block text-sm font-semibold text-ink dark:text-paper">
+          <label htmlFor="q-name" className="mb-2 block text-sm font-semibold text-ink dark:text-mist">
             Your name <span className="text-brand">*</span>
           </label>
           <input
@@ -145,7 +145,7 @@ export default function QuoteForm({ initialType }: { initialType?: string }) {
           />
         </div>
         <div>
-          <label htmlFor="q-contact" className="mb-2 block text-sm font-semibold text-ink dark:text-paper">
+          <label htmlFor="q-contact" className="mb-2 block text-sm font-semibold text-ink dark:text-mist">
             Email or phone <span className="text-brand">*</span>
           </label>
           <input
@@ -161,7 +161,7 @@ export default function QuoteForm({ initialType }: { initialType?: string }) {
 
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor="q-type" className="mb-2 block text-sm font-semibold text-ink dark:text-paper">
+          <label htmlFor="q-type" className="mb-2 block text-sm font-semibold text-ink dark:text-mist">
             Project type <span className="text-brand">*</span>
           </label>
           <select
@@ -184,7 +184,7 @@ export default function QuoteForm({ initialType }: { initialType?: string }) {
           </select>
         </div>
         <div>
-          <label htmlFor="q-quantity" className="mb-2 block text-sm font-semibold text-ink dark:text-paper">
+          <label htmlFor="q-quantity" className="mb-2 block text-sm font-semibold text-ink dark:text-mist">
             Quantity
           </label>
           <input
@@ -198,7 +198,7 @@ export default function QuoteForm({ initialType }: { initialType?: string }) {
       </div>
 
       <div>
-        <label htmlFor="q-timeline" className="mb-2 block text-sm font-semibold text-ink dark:text-paper">
+        <label htmlFor="q-timeline" className="mb-2 block text-sm font-semibold text-ink dark:text-mist">
           Timeline
         </label>
         <select
@@ -219,7 +219,7 @@ export default function QuoteForm({ initialType }: { initialType?: string }) {
       </div>
 
       <div>
-        <label htmlFor="q-message" className="mb-2 block text-sm font-semibold text-ink dark:text-paper">
+        <label htmlFor="q-message" className="mb-2 block text-sm font-semibold text-ink dark:text-mist">
           Tell us about the project <span className="text-brand">*</span>
         </label>
         <textarea
@@ -233,16 +233,16 @@ export default function QuoteForm({ initialType }: { initialType?: string }) {
       </div>
 
       <div>
-        <label htmlFor="q-file" className="mb-2 block text-sm font-semibold text-ink dark:text-paper">
-          Attach artwork or a brief <span className="font-normal text-smoke">(optional)</span>
+        <label htmlFor="q-file" className="mb-2 block text-sm font-semibold text-ink dark:text-mist">
+          Attach artwork or a brief <span className="font-normal text-steel">(optional)</span>
         </label>
         <label
           htmlFor="q-file"
-          className="flex cursor-pointer items-center gap-3 rounded-xl border border-dashed border-line-light px-4 py-4 text-sm text-smoke transition-colors hover:border-brand hover:text-brand dark:border-line-dark"
+          className="flex cursor-pointer items-center gap-3 rounded-xl border border-dashed border-line-light px-4 py-4 text-sm text-steel transition-colors hover:border-brand hover:text-brand dark:border-line-dark"
         >
           <Icon name="upload" size={18} className="shrink-0" />
           {fileName ? (
-            <span className="font-medium text-ink dark:text-paper">{fileName}</span>
+            <span className="font-medium text-ink dark:text-mist">{fileName}</span>
           ) : (
             "PDF, JPG or PNG · max 10MB"
           )}
@@ -256,12 +256,6 @@ export default function QuoteForm({ initialType }: { initialType?: string }) {
           className="sr-only"
           onChange={(e) => setFileName(e.target.files?.[0]?.name ?? null)}
         />
-        {!formspreeId && (
-          <p className="mt-2 text-xs text-smoke">
-            This form currently delivers via WhatsApp — you can attach files in
-            the chat after sending your brief.
-          </p>
-        )}
       </div>
 
       {status === "error" && (
@@ -282,15 +276,6 @@ export default function QuoteForm({ initialType }: { initialType?: string }) {
       <Button type="submit" size="lg" arrow disabled={status === "sending"} className="mt-1 w-full sm:w-auto">
         {status === "sending" ? "Sending…" : "Send quote request"}
       </Button>
-      <p className="text-xs text-smoke">
-        We reply within one business day — usually much faster. Prefer email?{" "}
-        <a
-          href={`mailto:${SITE.email}`}
-          className="font-medium text-brand underline underline-offset-2"
-        >
-          {SITE.email}
-        </a>
-      </p>
     </form>
   );
 }

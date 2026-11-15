@@ -399,23 +399,23 @@ export function getService(id: string) {
 export const WHY_POINTS = [
   {
     icon: "gem",
-    title: "Obsessive Quality & Finishing",
-    text: "Paper weight, ink density, trim tolerance — we sweat details most printers never check. Every job passes a 21-point finishing inspection before dispatch.",
+    title: "Obsessive Quality",
+    text: "Every job passes a 21-point finishing inspection before it ships.",
   },
   {
     icon: "book",
-    title: "Book Publishing Excellence",
-    text: "Books are our first love. From memoirs to manuals, we produce publications that stand beside anything on an international shelf.",
+    title: "Publishing Excellence",
+    text: "Books built to stand on any shelf in the world.",
   },
   {
     icon: "palette",
-    title: "Full Branding & Design Capability",
-    text: "Design studio and print house under one roof. What we design is engineered for press from day one — no costly translation errors.",
+    title: "Design + Print, One Roof",
+    text: "Engineered for press from the first artboard. Nothing lost in translation.",
   },
   {
     icon: "crown",
     title: "Treated Like Royalty",
-    text: "One point of contact, honest timelines, proactive updates. Our clients stay because of how they're treated — the print is the bonus.",
+    text: "One contact. Honest timelines. Proactive updates, always.",
   },
 ] as const;
 
@@ -550,7 +550,7 @@ export const ARTICLES: Article[] = [
       src: "/images/insights/cmyk.jpg",
       alt: "CMYK ink rollers on a printing press showing vivid colour",
     },
-    body: `Every designer has lived this heartbreak: a poster that blazed coral-red on the monitor comes off the press looking… subdued. Nobody made a mistake. Your screen and our press simply speak two different colour languages.
+    body: `Every designer has lived this heartbreak: a poster that blazed coral-red on the monitor comes off the press looking… subdued. Nobody made a paperake. Your screen and our press simply speak two different colour languages.
 
 ## Light versus ink
 
@@ -697,7 +697,7 @@ Pages gathered into a block, spine milled, glued into a wraparound cover. Your s
 Sewn or glued book block cased into rigid board covers. This is the binding of memoirs, coffee-table books and anything meant to outlive its author.
 
 - **Best for:** premium books, yearbooks, limited editions
-- **Pros:** unmistakable presence; the most durable option; supports foil, deboss, cloth and printed endpapers
+- **Pros:** unpaperakable presence; the most durable option; supports foil, deboss, cloth and printed endpapers
 - **Pair it with:** **Smyth-sewn** signatures — thread-sewn sections that open flat and essentially never fall apart
 
 ## Wire-O / spiral — the workhorse

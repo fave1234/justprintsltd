@@ -17,13 +17,13 @@ export default function WorkPage() {
         <div className="container-site">
           <Reveal>
             <p className="eyebrow mb-4">Our Work</p>
-            <h1 className="max-w-3xl font-display text-5xl font-semibold leading-[1.04] tracking-tightest text-ink dark:text-paper sm:text-6xl">
+            <h1 className="max-w-3xl font-display text-5xl font-extrabold leading-[1.04] tracking-normal text-ink dark:text-mist sm:text-6xl">
               The proof is in the{" "}
               <em className="not-italic text-brand">print</em>.
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-smoke-dark dark:text-smoke-light">
-              Every piece below left our press after a 21-point finishing check.
-              Filter by craft and look closely — the details are the point.
+            <p className="mt-6 max-w-xl text-xl leading-relaxed text-steel dark:text-steel-light">
+              Bound, foiled and finished with obsession — look closely; the
+              details are the point.
             </p>
           </Reveal>
           <div className="mt-12">

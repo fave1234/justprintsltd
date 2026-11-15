@@ -19,13 +19,13 @@ export default function ServicesPage() {
         <div className="container-site">
           <Reveal>
             <p className="eyebrow mb-4">Services</p>
-            <h1 className="max-w-3xl font-display text-5xl font-semibold leading-[1.04] tracking-tightest text-ink dark:text-paper sm:text-6xl">
+            <h1 className="max-w-3xl font-display text-5xl font-extrabold leading-[1.04] tracking-normal text-ink dark:text-mist sm:text-6xl">
               Everything your idea needs to{" "}
               <em className="not-italic text-brand">exist beautifully</em>.
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-smoke-dark dark:text-smoke-light">
-              Design studio and print house under one roof. Pick a craft —
-              every engagement ends with something you’re proud to hold.
+            <p className="mt-6 max-w-xl text-xl leading-relaxed text-steel dark:text-steel-light">
+              Five crafts, one roof — every engagement ends with something
+              you’re proud to hold.
             </p>
           </Reveal>
         </div>
@@ -45,7 +45,7 @@ export default function ServicesPage() {
               }`}
             >
               <Reveal>
-                <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-ink-mute">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-5xl bg-mist-soft">
                   <Image
                     src={service.image.src}
                     alt={service.image.alt}
@@ -63,22 +63,22 @@ export default function ServicesPage() {
                 <p className="eyebrow mb-3">0{i + 1}</p>
                 <h2
                   id={`service-${service.id}`}
-                  className="font-display text-3xl font-semibold leading-tight tracking-tightest text-ink dark:text-paper sm:text-4xl"
+                  className="font-display text-3xl font-extrabold leading-tight tracking-normal text-ink dark:text-mist sm:text-4xl"
                 >
                   {service.title}
                 </h2>
-                <p className="mt-5 leading-relaxed text-smoke-dark dark:text-smoke-light">
+                <p className="mt-5 leading-relaxed text-steel-dark dark:text-steel-light">
                   {service.description}
                 </p>
 
-                <h3 className="mt-8 text-sm font-semibold uppercase tracking-[0.16em] text-ink dark:text-paper">
+                <h3 className="mt-8 text-sm font-semibold uppercase tracking-[0.16em] text-ink dark:text-mist">
                   What’s included
                 </h3>
                 <ul className="mt-4 grid gap-2.5 sm:grid-cols-2">
                   {service.deliverables.map((d) => (
                     <li
                       key={d}
-                      className="flex items-start gap-2.5 text-sm text-ink-mute dark:text-paper/80"
+                      className="flex items-start gap-2.5 text-sm text-ink-mute dark:text-mist/80"
                     >
                       <Icon
                         name="check"

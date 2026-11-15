@@ -69,16 +69,16 @@ export default async function ArticlePage({
             <Reveal>
               <Link
                 href="/insights"
-                className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-smoke transition-colors hover:text-brand"
+                className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-steel transition-colors hover:text-brand"
               >
                 <Icon name="arrowRight" size={15} className="rotate-180" />
                 All insights
               </Link>
               <p className="eyebrow mb-4">{article.category}</p>
-              <h1 className="font-display text-4xl font-semibold leading-[1.08] tracking-tightest text-ink dark:text-paper sm:text-5xl">
+              <h1 className="font-display text-4xl font-extrabold leading-[1.08] tracking-normal text-ink dark:text-mist sm:text-5xl">
                 {article.title}
               </h1>
-              <p className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-smoke">
+              <p className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-steel">
                 <span className="inline-flex items-center gap-1.5">
                   <Icon name="calendar" size={14} />
                   {formatDate(article.date)}
@@ -95,7 +95,7 @@ export default async function ArticlePage({
         {/* Cover */}
         <div className="container-site max-w-4xl">
           <Reveal>
-            <div className="relative aspect-[16/9] overflow-hidden rounded-3xl bg-ink-mute">
+            <div className="relative aspect-[16/9] overflow-hidden rounded-5xl bg-mist-soft">
               <Image
                 src={article.cover.src}
                 alt={article.cover.alt}
@@ -116,8 +116,8 @@ export default async function ArticlePage({
 
           {/* Inline CTA */}
           <Reveal className="mt-14">
-            <div className="flex flex-col items-start gap-5 rounded-2xl border border-brand/30 bg-brand/5 p-7 sm:flex-row sm:items-center sm:justify-between dark:bg-brand/10">
-              <p className="font-display text-xl font-semibold tracking-tight text-ink dark:text-paper">
+            <div className="flex flex-col items-start gap-5 rounded-4xl border border-brand/30 bg-brand/5 p-7 sm:flex-row sm:items-center sm:justify-between dark:bg-brand/10">
+              <p className="font-display text-xl font-extrabold tracking-tight text-ink dark:text-mist">
                 Have a project in mind after reading this?
               </p>
               <ButtonLink href="/contact" arrow className="shrink-0">
@@ -136,7 +136,7 @@ export default async function ArticlePage({
         <div className="container-site">
           <h2
             id="related-articles"
-            className="font-display text-2xl font-semibold tracking-tight text-ink dark:text-paper"
+            className="font-display text-2xl font-extrabold tracking-tight text-ink dark:text-mist"
           >
             Keep reading
           </h2>
@@ -145,9 +145,9 @@ export default async function ArticlePage({
               <Link
                 key={rel.slug}
                 href={`/insights/${rel.slug}`}
-                className="group flex gap-5 rounded-2xl border border-line-light p-5 transition-all duration-300 hover:border-brand/50 dark:border-line-dark"
+                className="group flex gap-5 rounded-4xl border border-line-light p-5 transition-all duration-300 hover:border-brand/50 dark:border-line-dark"
               >
-                <div className="relative h-24 w-32 shrink-0 overflow-hidden rounded-xl bg-ink-mute">
+                <div className="relative h-24 w-32 shrink-0 overflow-hidden rounded-xl bg-mist-soft">
                   <Image
                     src={rel.cover.src}
                     alt={rel.cover.alt}
@@ -160,10 +160,10 @@ export default async function ArticlePage({
                   <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-brand">
                     {rel.category}
                   </p>
-                  <h3 className="font-display text-lg font-semibold leading-snug tracking-tight text-ink transition-colors group-hover:text-brand dark:text-paper">
+                  <h3 className="font-display text-lg font-extrabold leading-snug tracking-tight text-ink transition-colors group-hover:text-brand dark:text-mist">
                     {rel.title}
                   </h3>
-                  <p className="text-xs text-smoke">{rel.readTime}</p>
+                  <p className="text-xs text-steel">{rel.readTime}</p>
                 </div>
               </Link>
             ))}

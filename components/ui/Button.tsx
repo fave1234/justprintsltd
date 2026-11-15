@@ -6,23 +6,25 @@ type Variant = "primary" | "outline" | "light" | "ghost";
 type Size = "sm" | "md" | "lg";
 
 const base =
-  "group/btn inline-flex items-center justify-center gap-2 rounded-full font-semibold tracking-tight transition-all duration-300 ease-out-expo focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50";
+  "group/btn inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-all duration-300 ease-out-expo focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50";
 
+/**
+ * Per the design reference: brand red is an accent, never a control fill.
+ * Primary actions are dark pills (Midnight Ink); white pills sit on imagery.
+ */
 const variants: Record<Variant, string> = {
   primary:
-    "bg-brand text-white shadow-[0_10px_30px_-10px_rgba(196,30,58,0.6)] hover:-translate-y-0.5 hover:bg-brand-600 hover:shadow-[0_16px_36px_-10px_rgba(196,30,58,0.7)] active:translate-y-0",
+    "bg-ink text-white hover:-translate-y-0.5 hover:bg-ink-mute active:translate-y-0 dark:bg-mist-white dark:text-ink dark:hover:bg-mist",
   outline:
-    "border border-ink/25 text-ink hover:border-brand hover:text-brand dark:border-paper/30 dark:text-paper dark:hover:border-brand dark:hover:text-brand",
-  light:
-    "bg-white text-ink hover:-translate-y-0.5 hover:bg-paper shadow-[0_10px_30px_-12px_rgba(0,0,0,0.45)]",
-  ghost:
-    "text-ink-mute hover:text-brand dark:text-smoke-light dark:hover:text-brand",
+    "border border-ink/20 text-ink hover:border-ink dark:border-mist/30 dark:text-mist dark:hover:border-mist",
+  light: "bg-white text-ink hover:-translate-y-0.5 hover:bg-mist",
+  ghost: "text-steel hover:text-brand dark:text-steel-light dark:hover:text-brand",
 };
 
 const sizes: Record<Size, string> = {
-  sm: "h-9 px-4 text-[0.8rem]",
-  md: "h-11 px-6 text-sm",
-  lg: "h-[3.25rem] px-8 text-[0.95rem]",
+  sm: "h-9 px-4 text-sm",
+  md: "h-11 px-6 text-[0.95rem]",
+  lg: "h-[3.25rem] px-8 text-base",
 };
 
 export function ButtonLink({

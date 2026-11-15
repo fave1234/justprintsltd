@@ -20,39 +20,31 @@ export default function Testimonials() {
   const t = TESTIMONIALS[index];
 
   return (
-    <section className="py-24 lg:py-32" aria-labelledby="testimonials">
+    <section className="py-16 lg:py-20" aria-labelledby="testimonials">
       <div className="container-site">
         <SectionHeading
-          eyebrow="Kind Words"
-          title="Clients who felt like royalty."
+          eyebrow="Clients"
+          title="Treated like royalty."
           align="center"
           className="mx-auto"
         />
 
-        <div className="relative mx-auto mt-14 max-w-3xl">
-          <Icon
-            name="quote"
-            size={44}
-            className="mx-auto mb-8 text-brand"
-            aria-hidden="true"
-          />
-          <div className="min-h-[11rem] sm:min-h-[9rem]">
+        <div className="relative mx-auto mt-12 max-w-3xl">
+          <div className="min-h-[10rem] sm:min-h-[8rem]">
             <AnimatePresence mode="wait">
               <motion.blockquote
                 key={index}
-                initial={{ opacity: 0, y: 22 }}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -16 }}
-                transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+                exit={{ opacity: 0, y: -14 }}
+                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               >
-                <p className="text-center font-display text-xl font-medium leading-relaxed tracking-tight text-ink dark:text-paper sm:text-2xl">
+                <p className="text-center font-display text-xl font-bold leading-relaxed text-ink dark:text-mist sm:text-2xl">
                   “{t.quote}”
                 </p>
-                <footer className="mt-7 text-center">
-                  <p className="text-sm font-semibold text-ink dark:text-paper">
-                    {t.name}
-                  </p>
-                  <p className="mt-1 text-xs uppercase tracking-[0.18em] text-smoke">
+                <footer className="mt-6 text-center">
+                  <p className="text-sm font-bold text-ink dark:text-mist">{t.name}</p>
+                  <p className="mt-1 text-[13px] uppercase tracking-[0.1em] text-steel">
                     {t.role}
                   </p>
                 </footer>
@@ -60,15 +52,14 @@ export default function Testimonials() {
             </AnimatePresence>
           </div>
 
-          {/* Controls */}
-          <div className="mt-10 flex items-center justify-center gap-6">
+          <div className="mt-9 flex items-center justify-center gap-6">
             <button
               type="button"
               aria-label="Previous testimonial"
               onClick={() =>
                 setIndex((i) => (i - 1 + TESTIMONIALS.length) % TESTIMONIALS.length)
               }
-              className="grid h-10 w-10 place-items-center rounded-full border border-line-light text-ink-mute transition-colors hover:border-brand hover:text-brand dark:border-line-dark dark:text-paper"
+              className="grid h-10 w-10 place-items-center rounded-full border border-ink/20 text-ink transition-colors hover:border-ink dark:border-mist/30 dark:text-mist dark:hover:border-mist"
             >
               <Icon name="chevronLeft" size={16} />
             </button>
@@ -83,7 +74,7 @@ export default function Testimonials() {
                   className={`h-1.5 rounded-full transition-all duration-400 ${
                     i === index
                       ? "w-7 bg-brand"
-                      : "w-1.5 bg-line-light hover:bg-smoke dark:bg-line-dark"
+                      : "w-1.5 bg-line-light hover:bg-steel-light dark:bg-line-dark"
                   }`}
                 />
               ))}
@@ -92,7 +83,7 @@ export default function Testimonials() {
               type="button"
               aria-label="Next testimonial"
               onClick={() => setIndex((i) => (i + 1) % TESTIMONIALS.length)}
-              className="grid h-10 w-10 place-items-center rounded-full border border-line-light text-ink-mute transition-colors hover:border-brand hover:text-brand dark:border-line-dark dark:text-paper"
+              className="grid h-10 w-10 place-items-center rounded-full border border-ink/20 text-ink transition-colors hover:border-ink dark:border-mist/30 dark:text-mist dark:hover:border-mist"
             >
               <Icon name="chevronRight" size={16} />
             </button>

@@ -6,17 +6,17 @@ const ITEMS = [
   "Event Branding & Large Format",
 ];
 
-/** Infinite service ticker — an always-dark band for contrast in both themes. */
+/** Quiet service ticker — hairline band on the canvas in both themes. */
 export default function Marquee() {
   const row = [...ITEMS, ...ITEMS];
   return (
-    <div className="overflow-hidden border-y border-line-dark bg-ink-soft py-5">
+    <div className="mt-16 overflow-hidden border-y border-line-light py-4 dark:border-line-dark lg:mt-20">
       <div className="mask-fade-x">
         <ul className="animate-marquee flex w-max items-center gap-10 whitespace-nowrap">
           {row.map((item, i) => (
             <li
               key={i}
-              className="flex items-center gap-10 text-xs font-semibold uppercase tracking-[0.28em] text-paper/55"
+              className="flex items-center gap-10 text-[13px] font-semibold uppercase tracking-[0.14em] text-steel dark:text-steel-light"
               aria-hidden={i >= ITEMS.length}
             >
               {item}

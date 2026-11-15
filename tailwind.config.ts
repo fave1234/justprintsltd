@@ -1,5 +1,16 @@
 import type { Config } from "tailwindcss";
 
+/**
+ * Design tokens — Justprints by PlusFrica × Monzo-style reference
+ * ──────────────────────────────────────────────────────────────
+ * · Light-first: Page Mist canvas → white cards → Soft Mint fills
+ *   (dark theme = Midnight Ink surfaces; toggle persisted)
+ * · Brand red #EB3A34 is an ACCENT ONLY — logo, links, icons,
+ *   hairline highlights. Never a button fill / control surface.
+ * · Type: Inter (text, -0.05em) + Manrope (display, 700–800)
+ * · Shapes: 500px pills · 64px cards · 32px containers · 24px inputs
+ * · No shadows — hierarchy via surface color stepping + whitespace.
+ */
 const config: Config = {
   darkMode: "class",
   content: [
@@ -11,49 +22,52 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          "50": "#FCE9EC",
-          "100": "#F7CDD4",
-          "200": "#EF9AAA",
-          "300": "#E66780",
-          "400": "#DE3C5C",
-          "500": "#C41E3A",
-          "600": "#A81731",
-          "700": "#861228",
-          "800": "#640D1E",
-          "900": "#420814",
-          "950": "#2A050C",
-          DEFAULT: "#C41E3A",
+          "50": "#FDEEED",
+          "100": "#FAD8D6",
+          "200": "#F5B1AE",
+          "300": "#EF8581",
+          "400": "#EC5F5A",
+          "500": "#EB3A34",
+          "600": "#D42F29",
+          "700": "#B02721",
+          "800": "#8A1F1B",
+          "900": "#661713",
+          "950": "#440F0C",
+          DEFAULT: "#EB3A34",
         },
         ink: {
-          DEFAULT: "#0D0D0D",
-          soft: "#111111",
-          mute: "#1A1A1A",
-          raise: "#222222",
+          DEFAULT: "#091723", // Midnight Ink — text + primary dark pills (light theme)
+          soft: "#112231", // Deep Navy — dark-theme card surface
+          mute: "#3B4C54", // Slate — strong body text
         },
-        paper: {
-          DEFAULT: "#F8F6F4",
-          white: "#FFFFFF",
-          dim: "#EFEDEA",
+        mist: {
+          DEFAULT: "#F2F8F3", // Page Mist canvas
+          white: "#FFFFFF", // card surfaces
+          soft: "#E3EBE4", // Soft Mint — hairlines, hover washes, insets
         },
-        smoke: {
-          DEFAULT: "#888888",
-          dark: "#666666",
-          light: "#B0B0B0",
+        steel: {
+          DEFAULT: "#6B747B", // secondary body / metadata
+          dark: "#4C5860",
+          light: "#B5B9BD", // Fog — tertiary text, low-emphasis borders
         },
         line: {
-          light: "#E5E5E5",
-          dark: "#262626",
+          light: "#E3EBE4",
+          dark: "#22313D",
         },
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "-apple-system", "sans-serif"],
-        display: ["var(--font-fraunces)", "Georgia", "serif"],
-      },
-      letterSpacing: {
-        tightest: "-0.045em",
+        display: ["var(--font-manrope)", "system-ui", "-apple-system", "sans-serif"],
       },
       maxWidth: {
-        site: "80rem",
+        site: "75rem", // 1200px per reference
+      },
+      borderRadius: {
+        "4xl": "2rem", // containers / small cards
+        "5xl": "4rem", // cards — signature 64px
+      },
+      boxShadow: {
+        md: "rgba(0, 0, 0, 0.1) 0px 0px 10px 0px", // the ONLY shadow in the system
       },
       animation: {
         marquee: "marquee 36s linear infinite",
@@ -65,7 +79,7 @@ const config: Config = {
           "100%": { transform: "translateX(-50%)" },
         },
         "pulse-ring": {
-          "0%": { transform: "scale(1)", opacity: "0.5" },
+          "0%": { transform: "scale(1)", opacity: "0.45" },
           "80%, 100%": { transform: "scale(1.9)", opacity: "0" },
         },
       },
