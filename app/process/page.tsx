@@ -17,15 +17,9 @@ export default function ProcessPage() {
       <section className="pb-16 pt-36 lg:pt-44">
         <div className="container-site">
           <Reveal>
-            <p className="eyebrow mb-4">Our Process</p>
-            <h1 className="max-w-3xl font-display text-5xl font-extrabold leading-[1.04] tracking-normal text-ink dark:text-mist sm:text-6xl">
-              No surprises. Just{" "}
-              <em className="not-italic text-brand">craft</em>, step by step.
+            <h1 className="max-w-3xl font-display text-5xl font-extrabold leading-[1.04] text-ink dark:text-mist sm:text-6xl">
+              How it works.
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-steel-dark dark:text-steel-light">
-              Six stages, zero surprises — you approve everything before ink
-              touches paper.
-            </p>
           </Reveal>
         </div>
       </section>
@@ -44,10 +38,10 @@ export default function ProcessPage() {
                   <Icon name={step.icon as "chat"} size={24} />
                 </span>
                 <div className="pt-1">
-                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-steel">
-                    Step {String(i + 1).padStart(2, "0")} · {step.hint}
+                  <p className="font-display text-lg font-extrabold text-brand">
+                    {String(i + 1).padStart(2, "0")}
                   </p>
-                  <h2 className="mt-2 font-display text-2xl font-extrabold tracking-tight text-ink dark:text-mist sm:text-3xl">
+                  <h2 className="mt-1 font-display text-2xl font-extrabold text-ink dark:text-mist sm:text-3xl">
                     {step.title}
                   </h2>
                   <p className="mt-3 max-w-xl leading-relaxed text-steel-dark dark:text-steel-light">

@@ -1,5 +1,4 @@
 import Hero from "@/components/home/Hero";
-import Marquee from "@/components/home/Marquee";
 import FeaturedWork from "@/components/home/FeaturedWork";
 import WhyJustprints from "@/components/home/WhyJustprints";
 import ServicesSnapshot from "@/components/home/ServicesSnapshot";
@@ -51,7 +50,6 @@ export default function HomePage() {
     <>
       <JsonLd data={localBusiness} />
       <Hero />
-      <Marquee />
       <FeaturedWork />
       <WhyJustprints />
       <ServicesSnapshot />

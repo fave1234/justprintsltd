@@ -70,14 +70,9 @@ const config: Config = {
         md: "rgba(0, 0, 0, 0.1) 0px 0px 10px 0px", // the ONLY shadow in the system
       },
       animation: {
-        marquee: "marquee 36s linear infinite",
         "pulse-ring": "pulse-ring 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
       keyframes: {
-        marquee: {
-          "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-50%)" },
-        },
         "pulse-ring": {
           "0%": { transform: "scale(1)", opacity: "0.45" },
           "80%, 100%": { transform: "scale(1.9)", opacity: "0" },

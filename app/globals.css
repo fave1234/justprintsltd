@@ -78,10 +78,6 @@
   .rail-scroll::-webkit-scrollbar-track {
     background: transparent;
   }
-
-  .mask-fade-x {
-    mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
-  }
 }
 
 /* ─────────────────────────────────────────────────────────────
@@ -137,7 +133,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .animate-marquee,
   .animate-pulse-ring {
     animation: none !important;
   }

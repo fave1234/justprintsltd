@@ -118,7 +118,7 @@ export default async function ArticlePage({
           <Reveal className="mt-14">
             <div className="flex flex-col items-start gap-5 rounded-4xl border border-brand/30 bg-brand/5 p-7 sm:flex-row sm:items-center sm:justify-between dark:bg-brand/10">
               <p className="font-display text-xl font-extrabold tracking-tight text-ink dark:text-mist">
-                Have a project in mind after reading this?
+                Start your print project.
               </p>
               <ButtonLink href="/contact" arrow className="shrink-0">
                 Get a free quote

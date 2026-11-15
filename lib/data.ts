@@ -426,37 +426,31 @@ export const PROCESS_STEPS = [
     icon: "chat",
     title: "Consultation & Brief",
     text: "We listen first. On WhatsApp, a call, or over coffee at Asata — we capture your vision, audience, quantity, timeline and budget, then recommend the smartest route.",
-    hint: "Free · same-day response",
   },
   {
     icon: "pen",
     title: "Design & Layout",
     text: "If you need design, our studio concepts, typesets and lays out your project — engineered for print from the first artboard. Already have artwork? We preflight it for free.",
-    hint: "2–5 working days",
   },
   {
     icon: "eye",
     title: "Proofing & Approval",
     text: "You review a digital proof — and for books and large runs, a physical press proof. Nothing goes to press until you say the words: approved.",
-    hint: "You stay in control",
   },
   {
     icon: "printer",
     title: "Printing",
     text: "Your job hits the press — offset for volume, digital for speed. Colour is calibrated and checked sheet by sheet against your approved proof.",
-    hint: "Calibrated colour",
   },
   {
     icon: "checkbadge",
     title: "Finishing & Quality Check",
     text: "Binding, trimming, foiling, laminating — then our 21-point finishing inspection. If a copy isn't perfect, it doesn't ship. Simple.",
-    hint: "21-point inspection",
   },
   {
     icon: "truck",
     title: "Delivery / Collection",
     text: "Collect at our Asata press or have it delivered to your door, anywhere in Nigeria. We confirm safe arrival — treated like royalty, remember?",
-    hint: "Nationwide delivery",
   },
 ] as const;
 

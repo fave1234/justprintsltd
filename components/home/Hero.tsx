@@ -24,7 +24,6 @@ export default function Hero() {
             sizes="(max-width: 1280px) 100vw, 1216px"
             className="object-cover"
           />
-          {/* Darken treatment so white type always reads */}
           <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/30 to-transparent" />
         </motion.div>
 
@@ -37,33 +36,21 @@ export default function Hero() {
           }}
           className="absolute inset-x-0 bottom-0 p-7 sm:p-12 lg:p-16"
         >
-          <motion.p
-            variants={{ hidden: { opacity: 0, y: 18 }, show: { opacity: 1, y: 0 } }}
-            transition={{ duration: 0.7, ease }}
-            className="mb-5 inline-flex items-center gap-2.5 rounded-full bg-white/10 px-4 py-2 text-[13px] font-semibold uppercase tracking-[0.08em] text-white backdrop-blur-md"
-          >
-            <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand" />
-            Premium print house — Enugu, Nigeria
-          </motion.p>
-
           <motion.h1
             variants={{ hidden: { opacity: 0, y: 26 }, show: { opacity: 1, y: 0 } }}
             transition={{ duration: 0.85, ease }}
             className="max-w-3xl font-display text-[2.6rem] font-extrabold leading-[1.02] text-white sm:text-6xl lg:text-[61px]"
           >
-            We Don’t Just Print.
-            <span className="block">
-              We Craft <span className="text-brand-400">Excellence</span>.
-            </span>
+            Premium print, branding &amp; book publishing.
           </motion.h1>
 
           <motion.p
             variants={{ hidden: { opacity: 0, y: 22 }, show: { opacity: 1, y: 0 } }}
             transition={{ duration: 0.85, ease }}
-            className="mt-5 max-w-xl text-lg leading-relaxed text-white/80 sm:text-xl"
+            className="mt-5 max-w-lg text-lg leading-relaxed text-white/80 sm:text-xl"
           >
-            Premium book printing, branding &amp; design for visionaries who
-            refuse to settle.
+            Books, brands and events — designed, printed and delivered from
+            Enugu, Nigeria.
           </motion.p>
 
           <motion.div

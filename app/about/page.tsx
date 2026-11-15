@@ -20,10 +20,8 @@ export default function AboutPage() {
       <section className="pb-20 pt-36 lg:pt-44">
         <div className="container-site grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal>
-            <p className="eyebrow mb-4">Our Story</p>
-            <h1 className="font-display text-5xl font-extrabold leading-[1.04] tracking-normal text-ink dark:text-mist sm:text-6xl">
-              Eight years of ink.{" "}
-              <em className="not-italic text-brand">One new name.</em>
+            <h1 className="font-display text-5xl font-extrabold leading-[1.04] text-ink dark:text-mist sm:text-6xl">
+              About Justprints.
             </h1>
             <div className="mt-7 flex flex-col gap-5 leading-relaxed text-steel-dark dark:text-steel-light">
               <p>
@@ -60,11 +58,6 @@ export default function AboutPage() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/85 to-transparent p-6 pt-16">
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-mist/80">
-                  The press room · Asata, Enugu
-                </p>
-              </div>
             </div>
           </Reveal>
         </div>
@@ -91,9 +84,8 @@ export default function AboutPage() {
       <section className="border-y border-line-light bg-mist-white py-24 dark:border-line-dark dark:bg-ink-soft">
         <div className="container-site">
           <Reveal>
-            <p className="eyebrow mb-4">What We Live By</p>
-            <h2 className="max-w-2xl font-display text-4xl font-extrabold leading-[1.08] tracking-normal text-ink dark:text-mist sm:text-5xl">
-              Values you can feel in the paper.
+            <h2 className="max-w-2xl font-display text-4xl font-extrabold leading-[1.08] text-ink dark:text-mist sm:text-5xl">
+              What we live by.
             </h2>
           </Reveal>
           <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -131,11 +123,10 @@ export default function AboutPage() {
             </div>
           </Reveal>
           <Reveal delay={0.12}>
-            <p className="eyebrow mb-4">Leadership</p>
-            <h2 className="font-display text-4xl font-extrabold leading-tight tracking-normal text-ink dark:text-mist sm:text-5xl">
+            <h2 className="font-display text-4xl font-extrabold leading-tight text-ink dark:text-mist sm:text-5xl">
               Dr. Chiedozie Gideon Okeke
             </h2>
-            <p className="mt-2 text-sm font-semibold uppercase tracking-[0.18em] text-brand">
+            <p className="mt-2 text-sm font-semibold uppercase tracking-[0.08em] text-brand">
               Chief Executive Officer
             </p>
             {/* PLACEHOLDER bio — replace with client's approved text */}
@@ -174,10 +165,7 @@ export default function AboutPage() {
               aria-hidden="true"
               className="absolute -bottom-28 -left-20 h-72 w-72 rounded-full bg-brand/15 blur-3xl"
             />
-            <p className="relative text-xs font-semibold uppercase tracking-[0.28em] text-brand-200">
-              A PlusFrica Company
-            </p>
-            <h2 className="relative mx-auto mt-4 max-w-2xl font-display text-3xl font-extrabold leading-tight tracking-tight text-mist sm:text-4xl">
+            <h2 className="relative mx-auto max-w-2xl font-display text-3xl font-extrabold leading-tight text-mist sm:text-4xl">
               Part of the PlusFrica Group of Companies
             </h2>
             <p className="relative mx-auto mt-4 max-w-xl leading-relaxed text-mist/70">

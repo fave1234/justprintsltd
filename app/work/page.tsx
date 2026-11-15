@@ -16,15 +16,9 @@ export default function WorkPage() {
       <section className="pb-8 pt-36 lg:pt-44">
         <div className="container-site">
           <Reveal>
-            <p className="eyebrow mb-4">Our Work</p>
-            <h1 className="max-w-3xl font-display text-5xl font-extrabold leading-[1.04] tracking-normal text-ink dark:text-mist sm:text-6xl">
-              The proof is in the{" "}
-              <em className="not-italic text-brand">print</em>.
+            <h1 className="max-w-3xl font-display text-5xl font-extrabold leading-[1.04] text-ink dark:text-mist sm:text-6xl">
+              Selected work.
             </h1>
-            <p className="mt-6 max-w-xl text-xl leading-relaxed text-steel dark:text-steel-light">
-              Bound, foiled and finished with obsession — look closely; the
-              details are the point.
-            </p>
           </Reveal>
           <div className="mt-12">
             <WorkGrid />

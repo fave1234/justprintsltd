@@ -9,7 +9,7 @@ export default function ServicesSnapshot() {
   return (
     <section className="py-16 lg:py-20" aria-labelledby="services-snapshot">
       <div className="container-site">
-        <SectionHeading eyebrow="Services" title="Five crafts under one roof." />
+        <SectionHeading title="Services." />
 
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((service, i) => (

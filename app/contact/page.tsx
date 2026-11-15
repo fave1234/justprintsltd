@@ -29,14 +29,9 @@ export default async function ContactPage({
       <section className="pb-16 pt-36 lg:pt-44">
         <div className="container-site">
           <Reveal>
-            <p className="eyebrow mb-4">Contact · Get a Quote</p>
-            <h1 className="max-w-3xl font-display text-5xl font-extrabold leading-[1.04] tracking-normal text-ink dark:text-mist sm:text-6xl">
-              Let’s talk about what you’re{" "}
-              <em className="not-italic text-brand">making</em>.
+            <h1 className="max-w-3xl font-display text-5xl font-extrabold leading-[1.04] text-ink dark:text-mist sm:text-6xl">
+              Get a quote.
             </h1>
-            <p className="mt-6 max-w-xl text-xl leading-relaxed text-steel dark:text-steel-light">
-              WhatsApp for an instant answer, the form for a detailed quote.
-            </p>
           </Reveal>
 
           {/* Quick WhatsApp paths */}

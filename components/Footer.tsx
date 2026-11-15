@@ -11,9 +11,6 @@ export default function Footer() {
       <div className="container-site grid gap-12 py-14 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr] lg:py-16">
         <div className="flex flex-col gap-5">
           <Logo />
-          <p className="max-w-xs text-sm leading-relaxed text-steel dark:text-steel-light">
-            Premium print, branding &amp; publishing — Enugu, Nigeria.
-          </p>
           <div className="flex items-center gap-3">
             {SITE.socials.map((s) => (
               <a

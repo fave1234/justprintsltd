@@ -18,15 +18,9 @@ export default function ServicesPage() {
       <section className="pb-10 pt-36 lg:pt-44">
         <div className="container-site">
           <Reveal>
-            <p className="eyebrow mb-4">Services</p>
-            <h1 className="max-w-3xl font-display text-5xl font-extrabold leading-[1.04] tracking-normal text-ink dark:text-mist sm:text-6xl">
-              Everything your idea needs to{" "}
-              <em className="not-italic text-brand">exist beautifully</em>.
+            <h1 className="max-w-3xl font-display text-5xl font-extrabold leading-[1.04] text-ink dark:text-mist sm:text-6xl">
+              Services.
             </h1>
-            <p className="mt-6 max-w-xl text-xl leading-relaxed text-steel dark:text-steel-light">
-              Five crafts, one roof — every engagement ends with something
-              you’re proud to hold.
-            </p>
           </Reveal>
         </div>
       </section>

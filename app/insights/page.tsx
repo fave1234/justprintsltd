@@ -19,14 +19,9 @@ export default function InsightsPage() {
       <section className="pb-8 pt-36 lg:pt-44">
         <div className="container-site">
           <Reveal>
-            <p className="eyebrow mb-4">Insights</p>
-            <h1 className="max-w-3xl font-display text-5xl font-extrabold leading-[1.04] tracking-normal text-ink dark:text-mist sm:text-6xl">
-              Print wisdom from the{" "}
-              <em className="not-italic text-brand">press room</em>.
+            <h1 className="max-w-3xl font-display text-5xl font-extrabold leading-[1.04] text-ink dark:text-mist sm:text-6xl">
+              Insights.
             </h1>
-            <p className="mt-6 max-w-xl text-xl leading-relaxed text-steel dark:text-steel-light">
-              Practical notes from the press room.
-            </p>
           </Reveal>
         </div>
       </section>

@@ -7,7 +7,6 @@ import { FEATURED_PROJECTS } from "@/lib/data";
 import SectionHeading from "@/components/SectionHeading";
 import Reveal from "@/components/Reveal";
 import Icon from "@/components/Icon";
-import { ButtonLink } from "@/components/ui/Button";
 
 export default function FeaturedWork() {
   const railRef = useRef<HTMLDivElement>(null);
@@ -18,7 +17,7 @@ export default function FeaturedWork() {
     <section className="py-16 lg:py-20" aria-labelledby="featured-work">
       <div className="container-site">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <SectionHeading eyebrow="Work" title="Print worth staring at." />
+          <SectionHeading title="Selected work." />
           <Reveal className="flex items-center gap-3" delay={0.1}>
             <button
               type="button"
@@ -90,12 +89,6 @@ export default function FeaturedWork() {
           </Link>
         </div>
       </Reveal>
-
-      <div className="container-site mt-6">
-        <ButtonLink href="/work" variant="ghost" arrow>
-          Browse the full archive
-        </ButtonLink>
-      </div>
     </section>
   );
 }

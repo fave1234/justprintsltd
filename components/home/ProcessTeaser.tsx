@@ -13,7 +13,7 @@ export default function ProcessTeaser() {
     >
       <div className="container-site">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <SectionHeading eyebrow="Process" title="Brief to shelf in four moves." />
+          <SectionHeading title="Process." />
           <Reveal delay={0.1}>
             <ButtonLink href="/process" variant="outline" arrow>
               The full process

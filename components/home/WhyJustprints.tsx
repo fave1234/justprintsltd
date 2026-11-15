@@ -10,10 +10,7 @@ export default function WhyJustprints() {
       aria-labelledby="why-justprints"
     >
       <div className="container-site">
-        <SectionHeading
-          eyebrow="Why Justprints"
-          title="Quality isn’t a promise. It’s a process."
-        />
+        <SectionHeading title="Why Justprints." />
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {WHY_POINTS.map((point, i) => (

@@ -21,7 +21,7 @@ export default function CTABand() {
             />
             <div className="relative flex flex-col items-center gap-7">
               <h2 className="max-w-2xl font-display text-4xl font-extrabold leading-[1.06] sm:text-5xl">
-                Let’s make something worth holding onto.
+                Start your print project.
               </h2>
               <div className="flex flex-wrap items-center justify-center gap-3.5">
                 <ButtonLink href="/contact" variant="light" size="lg" arrow>

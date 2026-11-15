@@ -22,12 +22,7 @@ export default function Testimonials() {
   return (
     <section className="py-16 lg:py-20" aria-labelledby="testimonials">
       <div className="container-site">
-        <SectionHeading
-          eyebrow="Clients"
-          title="Treated like royalty."
-          align="center"
-          className="mx-auto"
-        />
+        <SectionHeading title="What clients say." align="center" className="mx-auto" />
 
         <div className="relative mx-auto mt-12 max-w-3xl">
           <div className="min-h-[10rem] sm:min-h-[8rem]">
