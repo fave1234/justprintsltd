@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────────────────────
+   Font variables — wired to Fontsource variable fonts imported
+   in app/layout.tsx (self-hosted, no render-blocking Google CDN)
+   ───────────────────────────────────────────────────────────── */
+:root {
+  --font-inter: "Inter Variable", "Inter", system-ui, -apple-system, sans-serif;
+  --font-fraunces: "Fraunces Variable", "Fraunces", Georgia, serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-paper font-sans text-ink-mute antialiased dark:bg-ink dark:text-paper;
+  }
+
+  ::selection {
+    @apply bg-brand text-white;
+  }
+
+  /* Accessible, branded focus ring */
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand ring-offset-2 ring-offset-paper dark:ring-offset-ink;
+  }
+
+  h1, h2, h3, h4 {
+    @apply text-balance;
+  }
+
+  /* Fraunces display tuning — high optical size, gentle softness */
+  .font-display {
+    font-variation-settings: "opsz" 100, "SOFT" 30, "WONK" 0;
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-site px-5 sm:px-8 lg:px-10;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.22em] text-brand;
+  }
+
+  /* Branded horizontal rule with red tick */
+  .rule-brand {
+    @apply relative border-t border-line-light dark:border-line-dark;
+  }
+}
+
+@layer utilities {
+  /* Subtle paper-grain / print-noise overlay — applied once to the whole page */
+  .grain-overlay {
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: 70;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  }
+  .dark .grain-overlay {
+    opacity: 0.055;
+  }
+
+  /* Thin, elegant scrollbar for horizontal project rails */
+  .rail-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: theme("colors.brand.500") transparent;
+  }
+  .rail-scroll::-webkit-scrollbar {
+    height: 6px;
+  }
+  .rail-scroll::-webkit-scrollbar-thumb {
+    background: theme("colors.brand.500");
+    border-radius: 999px;
+  }
+  .rail-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .mask-fade-x {
+    mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   Article body typography (Insights posts — rendered from a
+   markdown-lite string in lib/data.ts)
+   ───────────────────────────────────────────────────────────── */
+.article-body > * + * {
+  margin-top: 1.15rem;
+}
+.article-body h2 {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-variation-settings: "opsz" 60, "SOFT" 30;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-weight: 600;
+  margin-top: 2.2rem;
+  letter-spacing: -0.01em;
+}
+.article-body p {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+}
+.article-body ul {
+  list-style: none;
+  padding-left: 0;
+}
+.article-body ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  margin-top: 0.5rem;
+}
+.article-body ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 0.55rem;
+  height: 0.55rem;
+  background: theme("colors.brand.500");
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+.article-body strong {
+  font-weight: 650;
+  color: theme("colors.ink.mute");
+}
+.dark .article-body strong {
+  color: theme("colors.paper.white");
+}
+.article-body a {
+  color: theme("colors.brand.500");
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Honour reduced-motion preferences globally for CSS animations */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-pulse-ring {
+    animation: none !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
