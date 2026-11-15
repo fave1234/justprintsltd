@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "@fontsource-variable/inter";
-import "@fontsource-variable/fraunces";
+import "@fontsource-variable/manrope";
 import "./globals.css";
 import { SITE } from "@/lib/site";
 import Providers from "@/components/Providers";

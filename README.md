@@ -9,10 +9,10 @@ and a subsidiary of the PlusFrica Group (RC 1713477).
 ## Stack
 
 - **Next.js 15** (App Router) · **React 19** · **TypeScript**
-- **Tailwind CSS 3** — dual themes (dark default + light), class-based
+- **Tailwind CSS 3** — design tokens in `tailwind.config.ts` (brand **#EB3A34** accent-only, Page Mist canvas, Midnight Ink surfaces; light default + dark toggle)
 - **Framer Motion** — reveal animations, carousels, micro-interactions
 - **next-themes** — theme persistence via `localStorage`
-- **Fontsource** — self-hosted Inter Variable (UI) + Fraunces Variable (display)
+- **Fontsource** — self-hosted Inter Variable (text, -0.05em tracking) + Manrope Variable (display, 700–800)
 - No runtime backend required: the quote form posts to **Formspree** when
   configured, otherwise falls back to a fully pre-filled **WhatsApp** message.
 

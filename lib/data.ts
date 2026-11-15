@@ -399,23 +399,23 @@ export function getService(id: string) {
 export const WHY_POINTS = [
   {
     icon: "gem",
-    title: "Obsessive Quality & Finishing",
-    text: "Paper weight, ink density, trim tolerance — we sweat details most printers never check. Every job passes a 21-point finishing inspection before dispatch.",
+    title: "Obsessive Quality",
+    text: "Every job passes a 21-point finishing inspection before it ships.",
   },
   {
     icon: "book",
-    title: "Book Publishing Excellence",
-    text: "Books are our first love. From memoirs to manuals, we produce publications that stand beside anything on an international shelf.",
+    title: "Publishing Excellence",
+    text: "Books built to stand on any shelf in the world.",
   },
   {
     icon: "palette",
-    title: "Full Branding & Design Capability",
-    text: "Design studio and print house under one roof. What we design is engineered for press from day one — no costly translation errors.",
+    title: "Design + Print, One Roof",
+    text: "Engineered for press from the first artboard. Nothing lost in translation.",
   },
   {
     icon: "crown",
     title: "Treated Like Royalty",
-    text: "One point of contact, honest timelines, proactive updates. Our clients stay because of how they're treated — the print is the bonus.",
+    text: "One contact. Honest timelines. Proactive updates, always.",
   },
 ] as const;
 
@@ -426,37 +426,31 @@ export const PROCESS_STEPS = [
     icon: "chat",
     title: "Consultation & Brief",
     text: "We listen first. On WhatsApp, a call, or over coffee at Asata — we capture your vision, audience, quantity, timeline and budget, then recommend the smartest route.",
-    hint: "Free · same-day response",
   },
   {
     icon: "pen",
     title: "Design & Layout",
     text: "If you need design, our studio concepts, typesets and lays out your project — engineered for print from the first artboard. Already have artwork? We preflight it for free.",
-    hint: "2–5 working days",
   },
   {
     icon: "eye",
     title: "Proofing & Approval",
     text: "You review a digital proof — and for books and large runs, a physical press proof. Nothing goes to press until you say the words: approved.",
-    hint: "You stay in control",
   },
   {
     icon: "printer",
     title: "Printing",
     text: "Your job hits the press — offset for volume, digital for speed. Colour is calibrated and checked sheet by sheet against your approved proof.",
-    hint: "Calibrated colour",
   },
   {
     icon: "checkbadge",
     title: "Finishing & Quality Check",
     text: "Binding, trimming, foiling, laminating — then our 21-point finishing inspection. If a copy isn't perfect, it doesn't ship. Simple.",
-    hint: "21-point inspection",
   },
   {
     icon: "truck",
     title: "Delivery / Collection",
     text: "Collect at our Asata press or have it delivered to your door, anywhere in Nigeria. We confirm safe arrival — treated like royalty, remember?",
-    hint: "Nationwide delivery",
   },
 ] as const;
 
@@ -550,7 +544,7 @@ export const ARTICLES: Article[] = [
       src: "/images/insights/cmyk.jpg",
       alt: "CMYK ink rollers on a printing press showing vivid colour",
     },
-    body: `Every designer has lived this heartbreak: a poster that blazed coral-red on the monitor comes off the press looking… subdued. Nobody made a mistake. Your screen and our press simply speak two different colour languages.
+    body: `Every designer has lived this heartbreak: a poster that blazed coral-red on the monitor comes off the press looking… subdued. Nobody made a paperake. Your screen and our press simply speak two different colour languages.
 
 ## Light versus ink
 
@@ -697,7 +691,7 @@ Pages gathered into a block, spine milled, glued into a wraparound cover. Your s
 Sewn or glued book block cased into rigid board covers. This is the binding of memoirs, coffee-table books and anything meant to outlive its author.
 
 - **Best for:** premium books, yearbooks, limited editions
-- **Pros:** unmistakable presence; the most durable option; supports foil, deboss, cloth and printed endpapers
+- **Pros:** unpaperakable presence; the most durable option; supports foil, deboss, cloth and printed endpapers
 - **Pair it with:** **Smyth-sewn** signatures — thread-sewn sections that open flat and essentially never fall apart
 
 ## Wire-O / spiral — the workhorse

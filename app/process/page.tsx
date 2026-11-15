@@ -17,16 +17,9 @@ export default function ProcessPage() {
       <section className="pb-16 pt-36 lg:pt-44">
         <div className="container-site">
           <Reveal>
-            <p className="eyebrow mb-4">Our Process</p>
-            <h1 className="max-w-3xl font-display text-5xl font-semibold leading-[1.04] tracking-tightest text-ink dark:text-paper sm:text-6xl">
-              No surprises. Just{" "}
-              <em className="not-italic text-brand">craft</em>, step by step.
+            <h1 className="max-w-3xl font-display text-5xl font-extrabold leading-[1.04] text-ink dark:text-mist sm:text-6xl">
+              How it works.
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-smoke-dark dark:text-smoke-light">
-              Six transparent stages from first hello to final delivery. You
-              approve everything before ink touches paper — and you’re never
-              left guessing where your project stands.
-            </p>
           </Reveal>
         </div>
       </section>
@@ -41,17 +34,17 @@ export default function ProcessPage() {
           {PROCESS_STEPS.map((step, i) => (
             <Reveal key={step.title} delay={0.05 * i}>
               <li className="relative flex gap-6 py-8 sm:gap-9">
-                <span className="relative z-10 grid h-[3.3rem] w-[3.3rem] shrink-0 place-items-center rounded-2xl border border-brand/40 bg-paper text-brand shadow-[0_0_0_6px] shadow-paper dark:bg-ink dark:shadow-ink sm:h-[4.3rem] sm:w-[4.3rem]">
+                <span className="relative z-10 grid h-[3.3rem] w-[3.3rem] shrink-0 place-items-center rounded-4xl border border-brand/40 bg-mist text-brand shadow-[0_0_0_6px] shadow-mist dark:bg-ink dark:shadow-ink sm:h-[4.3rem] sm:w-[4.3rem]">
                   <Icon name={step.icon as "chat"} size={24} />
                 </span>
                 <div className="pt-1">
-                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-smoke">
-                    Step {String(i + 1).padStart(2, "0")} · {step.hint}
+                  <p className="font-display text-lg font-extrabold text-brand">
+                    {String(i + 1).padStart(2, "0")}
                   </p>
-                  <h2 className="mt-2 font-display text-2xl font-semibold tracking-tight text-ink dark:text-paper sm:text-3xl">
+                  <h2 className="mt-1 font-display text-2xl font-extrabold text-ink dark:text-mist sm:text-3xl">
                     {step.title}
                   </h2>
-                  <p className="mt-3 max-w-xl leading-relaxed text-smoke-dark dark:text-smoke-light">
+                  <p className="mt-3 max-w-xl leading-relaxed text-steel-dark dark:text-steel-light">
                     {step.text}
                   </p>
                 </div>

@@ -29,16 +29,9 @@ export default async function ContactPage({
       <section className="pb-16 pt-36 lg:pt-44">
         <div className="container-site">
           <Reveal>
-            <p className="eyebrow mb-4">Contact · Get a Quote</p>
-            <h1 className="max-w-3xl font-display text-5xl font-semibold leading-[1.04] tracking-tightest text-ink dark:text-paper sm:text-6xl">
-              Let’s talk about what you’re{" "}
-              <em className="not-italic text-brand">making</em>.
+            <h1 className="max-w-3xl font-display text-5xl font-extrabold leading-[1.04] text-ink dark:text-mist sm:text-6xl">
+              Get a quote.
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-smoke-dark dark:text-smoke-light">
-              Two easy ways in: tap a WhatsApp shortcut below for an instant
-              chat, or send the detailed quote form — we reply within one
-              business day, usually much faster.
-            </p>
           </Reveal>
 
           {/* Quick WhatsApp paths */}
@@ -49,24 +42,18 @@ export default async function ContactPage({
                   href={waLink(q.message)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-4 rounded-2xl border border-line-light bg-paper-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#25D366]/60 hover:shadow-[0_18px_40px_-20px_rgba(37,211,102,0.45)] dark:border-line-dark dark:bg-ink-mute"
+                  className="group flex items-center gap-4 rounded-4xl border border-line-light bg-mist-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#25D366]/60 dark:border-line-dark dark:bg-ink-soft"
                 >
                   <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-[#25D366]/12 text-[#128C4B] transition-transform duration-300 group-hover:scale-110 dark:text-[#4ade80]">
                     <Icon name={q.icon} size={21} />
                   </span>
-                  <span>
-                    <span className="block text-sm font-semibold text-ink dark:text-paper">
-                      {q.label}
-                    </span>
-                    <span className="mt-0.5 inline-flex items-center gap-1.5 text-xs text-smoke">
-                      <Icon name="whatsapp" size={13} className="text-[#25D366]" />
-                      Pre-filled WhatsApp chat
-                    </span>
+                  <span className="text-sm font-semibold text-ink dark:text-mist">
+                    {q.label}
                   </span>
                   <Icon
                     name="arrowUpRight"
                     size={16}
-                    className="ml-auto text-smoke transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#25D366]"
+                    className="ml-auto text-steel transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#25D366]"
                   />
                 </a>
               </Reveal>
@@ -75,33 +62,32 @@ export default async function ContactPage({
         </div>
       </section>
 
-      <section className="container-site pb-24 lg:pb-32">
+      <section className="container-site pb-16 lg:pb-20">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14">
           {/* Quote form */}
           <Reveal>
-            <div className="rounded-3xl border border-line-light bg-paper-white p-7 dark:border-line-dark dark:bg-ink-mute sm:p-9">
-              <h2 className="font-display text-2xl font-semibold tracking-tight text-ink dark:text-paper sm:text-3xl">
+            <div className="rounded-5xl border border-line-light bg-mist-white p-7 dark:border-line-dark dark:bg-ink-soft sm:p-9">
+              <h2 className="font-display text-2xl font-extrabold tracking-tight text-ink dark:text-mist sm:text-3xl">
                 Request a free quote
               </h2>
-              <p className="mb-8 mt-2 text-sm text-smoke-dark dark:text-smoke-light">
-                The more detail you give us, the sharper the quote.
-              </p>
-              <QuoteForm initialType={type} />
+              <div className="mt-8">
+                <QuoteForm initialType={type} />
+              </div>
             </div>
           </Reveal>
 
           {/* Info panel */}
           <div className="flex flex-col gap-5">
             <Reveal delay={0.08}>
-              <div className="rounded-3xl border border-line-light bg-paper-white p-7 dark:border-line-dark dark:bg-ink-mute">
-                <h2 className="flex items-center gap-2.5 font-display text-xl font-semibold tracking-tight text-ink dark:text-paper">
+              <div className="rounded-5xl border border-line-light bg-mist-white p-7 dark:border-line-dark dark:bg-ink-soft">
+                <h2 className="flex items-center gap-2.5 font-display text-xl font-extrabold tracking-tight text-ink dark:text-mist">
                   <Icon name="mapPin" size={19} className="text-brand" />
                   Visit the press
                 </h2>
-                <p className="mt-3 text-sm leading-relaxed text-ink-mute dark:text-paper/80">
+                <p className="mt-3 text-sm leading-relaxed text-ink-mute dark:text-mist/80">
                   {SITE.address.primary}
                 </p>
-                <p className="mt-2 text-xs text-smoke">
+                <p className="mt-2 text-xs text-steel">
                   Previously: {SITE.address.previous}
                 </p>
                 <div className="mt-5 overflow-hidden rounded-xl border border-line-light dark:border-line-dark">
@@ -119,8 +105,8 @@ export default async function ContactPage({
             </Reveal>
 
             <Reveal delay={0.14}>
-              <div className="rounded-3xl border border-line-light bg-paper-white p-7 dark:border-line-dark dark:bg-ink-mute">
-                <h2 className="flex items-center gap-2.5 font-display text-xl font-semibold tracking-tight text-ink dark:text-paper">
+              <div className="rounded-5xl border border-line-light bg-mist-white p-7 dark:border-line-dark dark:bg-ink-soft">
+                <h2 className="flex items-center gap-2.5 font-display text-xl font-extrabold tracking-tight text-ink dark:text-mist">
                   <Icon name="phone" size={19} className="text-brand" />
                   Call or write
                 </h2>
@@ -129,9 +115,9 @@ export default async function ContactPage({
                     <li key={p.raw}>
                       <a
                         href={`tel:+${p.raw}`}
-                        className="inline-flex items-center gap-2.5 text-ink-mute transition-colors hover:text-brand dark:text-paper/80"
+                        className="inline-flex items-center gap-2.5 text-ink-mute transition-colors hover:text-brand dark:text-mist/80"
                       >
-                        <Icon name="phone" size={15} className="text-smoke" />
+                        <Icon name="phone" size={15} className="text-steel" />
                         {p.label}
                       </a>
                     </li>
@@ -139,9 +125,9 @@ export default async function ContactPage({
                   <li>
                     <a
                       href={`mailto:${SITE.email}`}
-                      className="inline-flex items-center gap-2.5 text-ink-mute transition-colors hover:text-brand dark:text-paper/80"
+                      className="inline-flex items-center gap-2.5 text-ink-mute transition-colors hover:text-brand dark:text-mist/80"
                     >
-                      <Icon name="mail" size={15} className="text-smoke" />
+                      <Icon name="mail" size={15} className="text-steel" />
                       {SITE.email}
                     </a>
                   </li>
@@ -150,8 +136,8 @@ export default async function ContactPage({
             </Reveal>
 
             <Reveal delay={0.2}>
-              <div className="rounded-3xl border border-line-light bg-paper-white p-7 dark:border-line-dark dark:bg-ink-mute">
-                <h2 className="flex items-center gap-2.5 font-display text-xl font-semibold tracking-tight text-ink dark:text-paper">
+              <div className="rounded-5xl border border-line-light bg-mist-white p-7 dark:border-line-dark dark:bg-ink-soft">
+                <h2 className="flex items-center gap-2.5 font-display text-xl font-extrabold tracking-tight text-ink dark:text-mist">
                   <Icon name="clock" size={19} className="text-brand" />
                   Opening hours
                 </h2>
@@ -161,12 +147,12 @@ export default async function ContactPage({
                       key={h.days}
                       className="flex items-center justify-between border-b border-dashed border-line-light pb-2.5 last:border-0 last:pb-0 dark:border-line-dark"
                     >
-                      <span className="text-ink-mute dark:text-paper/80">{h.days}</span>
+                      <span className="text-ink-mute dark:text-mist/80">{h.days}</span>
                       <span
                         className={
                           h.time === "Closed"
-                            ? "text-smoke"
-                            : "font-semibold text-ink dark:text-paper"
+                            ? "text-steel"
+                            : "font-semibold text-ink dark:text-mist"
                         }
                       >
                         {h.time}

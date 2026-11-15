@@ -3,19 +3,15 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Icon from "./Icon";
-import { SITE, WA_MESSAGES, trackEvent, waLink } from "@/lib/site";
+import { WA_MESSAGES, trackEvent, waLink } from "@/lib/site";
 
 const QUICK_OPTIONS = [
-  { label: "Book Printing & Publishing", message: WA_MESSAGES.book },
-  { label: "Branding & Design", message: WA_MESSAGES.branding },
-  { label: "Event Materials", message: WA_MESSAGES.event },
-  { label: "General Enquiry", message: WA_MESSAGES.general },
+  { label: "Book printing", message: WA_MESSAGES.book },
+  { label: "Branding & design", message: WA_MESSAGES.branding },
+  { label: "Event materials", message: WA_MESSAGES.event },
+  { label: "General enquiry", message: WA_MESSAGES.general },
 ];
 
-/**
- * Floating WhatsApp button with smart pre-filled messages —
- * always visible (mobile & desktop) per the brief.
- */
 export default function WhatsAppFloat() {
   const [open, setOpen] = useState(false);
 
@@ -35,42 +31,34 @@ export default function WhatsAppFloat() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 14, scale: 0.95 }}
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-            className="w-[19rem] overflow-hidden rounded-2xl border border-line-light bg-paper-white shadow-2xl dark:border-line-dark dark:bg-ink-mute"
+            className="w-[18rem] overflow-hidden rounded-4xl border border-line-light bg-white shadow-md dark:border-line-dark dark:bg-ink-soft"
           >
-            <div className="bg-brand px-5 py-4">
-              <p className="font-display text-lg font-semibold text-white">
-                Chat with us
-              </p>
-              <p className="mt-0.5 flex items-center gap-1.5 text-xs text-white/85">
-                <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-300" />
-                Typically replies within the hour
-              </p>
-            </div>
-            <ul className="divide-y divide-line-light dark:divide-line-dark">
+            <p className="flex items-center gap-2.5 px-6 pb-3 pt-5 font-display text-lg font-extrabold text-ink dark:text-mist">
+              <span className="grid h-8 w-8 place-items-center rounded-full bg-[#25D366]/15 text-[#128C4B] dark:text-[#4ade80]">
+                <Icon name="whatsapp" size={16} />
+              </span>
+              Chat with us
+            </p>
+            <ul className="divide-y divide-line-light border-t border-line-light dark:divide-line-dark dark:border-line-dark">
               {QUICK_OPTIONS.map((opt) => (
                 <li key={opt.label}>
                   <a
                     href={waLink(opt.message)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={() =>
-                      trackEvent("whatsapp_click", { topic: opt.label })
-                    }
-                    className="group flex items-center justify-between gap-3 px-5 py-3.5 text-sm font-medium text-ink-mute transition-colors hover:bg-brand/5 hover:text-brand dark:text-paper/85 dark:hover:bg-brand/10"
+                    onClick={() => trackEvent("whatsapp_click", { topic: opt.label })}
+                    className="group flex items-center justify-between gap-3 px-6 py-3.5 text-sm font-semibold text-ink-mute transition-colors hover:bg-mist-soft/60 hover:text-brand dark:text-mist/85 dark:hover:bg-white/5"
                   >
                     {opt.label}
                     <Icon
                       name="arrowUpRight"
                       size={15}
-                      className="text-smoke transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand"
+                      className="text-steel-light transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand"
                     />
                   </a>
                 </li>
               ))}
             </ul>
-            <p className="px-5 py-3 text-center text-[0.7rem] text-smoke">
-              Or call {SITE.phones[0].label} · {SITE.phones[1].label}
-            </p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -78,9 +66,9 @@ export default function WhatsAppFloat() {
       <button
         type="button"
         onClick={toggleOpen}
-        aria-label={open ? "Close WhatsApp chat options" : "Chat with Justprints on WhatsApp"}
+        aria-label={open ? "Close chat options" : "Chat with Justprints on WhatsApp"}
         aria-expanded={open}
-        className="relative grid h-14 w-14 place-items-center rounded-full bg-[#25D366] text-white shadow-[0_12px_32px_-8px_rgba(37,211,102,0.55)] transition-transform duration-300 hover:scale-105 active:scale-95"
+        className="relative grid h-14 w-14 place-items-center rounded-full bg-[#25D366] text-white shadow-md transition-transform duration-300 hover:scale-105 active:scale-95"
       >
         {!open && (
           <span className="animate-pulse-ring absolute inset-0 rounded-full bg-[#25D366]" />

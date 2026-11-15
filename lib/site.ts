@@ -10,9 +10,8 @@ export const SITE = {
   group: "PlusFrica Group",
   rc: "RC7805223",
   groupRc: "RC 1713477",
-  tagline: "We Don’t Just Print. We Craft Excellence.",
   description:
-    "Justprints by PlusFrica Ltd is a premium printing, branding, graphic design and book publishing house in Enugu, Nigeria. Premium book printing, branding & design for visionaries who refuse to settle.",
+    "Justprints by PlusFrica Ltd — premium printing, branding, graphic design and book publishing in Enugu, Nigeria. Books, brands and events: designed, printed, delivered.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://justprints.ng",
 
   email: "justprintsltd1@gmail.com",

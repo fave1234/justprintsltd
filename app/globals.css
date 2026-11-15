@@ -4,11 +4,11 @@
 
 /* ─────────────────────────────────────────────────────────────
    Font variables — wired to Fontsource variable fonts imported
-   in app/layout.tsx (self-hosted, no render-blocking Google CDN)
+   in app/layout.tsx (self-hosted, no render-blocking CDN)
    ───────────────────────────────────────────────────────────── */
 :root {
   --font-inter: "Inter Variable", "Inter", system-ui, -apple-system, sans-serif;
-  --font-fraunces: "Fraunces Variable", "Fraunces", Georgia, serif;
+  --font-manrope: "Manrope Variable", "Manrope", system-ui, -apple-system, sans-serif;
 }
 
 @layer base {
@@ -18,58 +18,52 @@
   }
 
   body {
-    @apply bg-paper font-sans text-ink-mute antialiased dark:bg-ink dark:text-paper;
+    /* -0.05em tracking is the text-face fingerprint — per brand reference */
+    @apply bg-mist font-sans tracking-[-0.05em] text-ink-mute antialiased dark:bg-ink dark:text-steel-light;
   }
 
   ::selection {
     @apply bg-brand text-white;
   }
 
-  /* Accessible, branded focus ring */
   :focus-visible {
-    @apply outline-none ring-2 ring-brand ring-offset-2 ring-offset-paper dark:ring-offset-ink;
+    @apply outline-none ring-2 ring-brand ring-offset-2 ring-offset-mist dark:ring-offset-ink;
   }
 
   h1, h2, h3, h4 {
     @apply text-balance;
   }
 
-  /* Fraunces display tuning — high optical size, gentle softness */
+  /* Display type: Manrope heavy, normal tracking (reference rule) */
   .font-display {
-    font-variation-settings: "opsz" 100, "SOFT" 30, "WONK" 0;
+    @apply tracking-normal;
   }
 }
 
 @layer components {
   .container-site {
-    @apply mx-auto w-full max-w-site px-5 sm:px-8 lg:px-10;
+    @apply mx-auto w-full max-w-site px-5 sm:px-8;
   }
 
   .eyebrow {
-    @apply text-xs font-semibold uppercase tracking-[0.22em] text-brand;
-  }
-
-  /* Branded horizontal rule with red tick */
-  .rule-brand {
-    @apply relative border-t border-line-light dark:border-line-dark;
+    @apply text-[13px] font-semibold uppercase tracking-[0.08em] text-brand;
   }
 }
 
 @layer utilities {
-  /* Subtle paper-grain / print-noise overlay — applied once to the whole page */
+  /* Barely-there paper grain — tactile, not noisy */
   .grain-overlay {
     pointer-events: none;
     position: fixed;
     inset: 0;
     z-index: 70;
-    opacity: 0.035;
+    opacity: 0.03;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
   }
   .dark .grain-overlay {
-    opacity: 0.055;
+    opacity: 0.05;
   }
 
-  /* Thin, elegant scrollbar for horizontal project rails */
   .rail-scroll {
     scrollbar-width: thin;
     scrollbar-color: theme("colors.brand.500") transparent;
@@ -84,31 +78,25 @@
   .rail-scroll::-webkit-scrollbar-track {
     background: transparent;
   }
-
-  .mask-fade-x {
-    mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
-  }
 }
 
 /* ─────────────────────────────────────────────────────────────
-   Article body typography (Insights posts — rendered from a
-   markdown-lite string in lib/data.ts)
+   Article body typography (Insights)
    ───────────────────────────────────────────────────────────── */
 .article-body > * + * {
   margin-top: 1.15rem;
 }
 .article-body h2 {
-  font-family: var(--font-fraunces), Georgia, serif;
-  font-variation-settings: "opsz" 60, "SOFT" 30;
+  font-family: var(--font-manrope), system-ui, sans-serif;
+  letter-spacing: normal;
   font-size: 1.5rem;
   line-height: 1.25;
-  font-weight: 600;
+  font-weight: 800;
   margin-top: 2.2rem;
-  letter-spacing: -0.01em;
 }
 .article-body p {
   font-size: 1.0625rem;
-  line-height: 1.8;
+  line-height: 1.75;
 }
 .article-body ul {
   list-style: none;
@@ -118,25 +106,25 @@
   position: relative;
   padding-left: 1.5rem;
   font-size: 1.0625rem;
-  line-height: 1.75;
+  line-height: 1.7;
   margin-top: 0.5rem;
 }
 .article-body ul li::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 0.72em;
-  width: 0.55rem;
-  height: 0.55rem;
+  top: 0.68em;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
   background: theme("colors.brand.500");
-  clip-path: polygon(0 0, 100% 50%, 0 100%);
 }
 .article-body strong {
-  font-weight: 650;
-  color: theme("colors.ink.mute");
+  font-weight: 700;
+  color: theme("colors.ink.DEFAULT");
 }
 .dark .article-body strong {
-  color: theme("colors.paper.white");
+  color: theme("colors.mist.DEFAULT");
 }
 .article-body a {
   color: theme("colors.brand.500");
@@ -144,9 +132,7 @@
   text-underline-offset: 3px;
 }
 
-/* Honour reduced-motion preferences globally for CSS animations */
 @media (prefers-reduced-motion: reduce) {
-  .animate-marquee,
   .animate-pulse-ring {
     animation: none !important;
   }

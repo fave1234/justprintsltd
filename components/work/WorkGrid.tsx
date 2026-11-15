@@ -35,22 +35,22 @@ export default function WorkGrid() {
               role="tab"
               aria-selected={isActive}
               onClick={() => setActive(cat)}
-              className={`relative rounded-full px-4 py-2 text-sm font-medium transition-colors duration-300 ${
+              className={`relative rounded-full px-4 py-2 text-sm font-semibold transition-colors duration-300 ${
                 isActive
-                  ? "text-white"
-                  : "text-ink-mute hover:text-brand dark:text-paper/70 dark:hover:text-brand"
+                  ? "text-white dark:text-ink"
+                  : "text-ink-mute hover:text-brand dark:text-mist/70 dark:hover:text-brand"
               }`}
             >
               {isActive && (
                 <motion.span
                   layoutId="work-filter-pill"
-                  className="absolute inset-0 rounded-full bg-brand"
+                  className="absolute inset-0 rounded-full bg-ink dark:bg-mist-white"
                   transition={{ type: "spring", stiffness: 420, damping: 34 }}
                 />
               )}
               <span className="relative">
                 {cat}
-                <span className={`ml-1.5 text-xs ${isActive ? "text-white/70" : "text-smoke"}`}>
+                <span className={`ml-1.5 text-xs ${isActive ? "text-white/60 dark:text-ink/60" : "text-steel"}`}>
                   {count}
                 </span>
               </span>
@@ -72,7 +72,7 @@ export default function WorkGrid() {
               transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
             >
               <Link href={`/work/${project.slug}`} className="group block">
-                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-ink-mute">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-4xl bg-mist-soft">
                   <Image
                     src={project.cover.src}
                     alt={project.cover.alt}
@@ -88,12 +88,12 @@ export default function WorkGrid() {
                     <p className="mb-1.5 text-[0.65rem] font-semibold uppercase tracking-[0.24em] text-brand-200">
                       {project.category} · {project.year}
                     </p>
-                    <h2 className="font-display text-2xl font-semibold tracking-tight text-paper">
+                    <h2 className="font-display text-2xl font-extrabold tracking-tight text-mist">
                       {project.title}
                     </h2>
                   </div>
                 </div>
-                <p className="mt-4 text-sm leading-relaxed text-smoke-dark dark:text-smoke-light">
+                <p className="mt-4 text-sm leading-relaxed text-steel-dark dark:text-steel-light">
                   {project.summary}
                 </p>
               </Link>
@@ -103,7 +103,7 @@ export default function WorkGrid() {
       </motion.div>
 
       {filtered.length === 0 && (
-        <p className="mt-16 text-center text-smoke">
+        <p className="mt-16 text-center text-steel">
           Nothing here yet — check back soon.
         </p>
       )}
