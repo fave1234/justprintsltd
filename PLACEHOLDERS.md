@@ -4,14 +4,17 @@ The site is fully functional, but the following items are **professional placeho
 that the client should replace/confirm before launch (per Section 10 of the brief):
 
 ## Assets
-- [ ] **Logo** — currently an inline SVG wordmark (`components/Logo.tsx`). Replace with final logo files (SVG + PNG, light & dark variants).
-- [ ] **Photography** — all images in `public/images/` are AI-generated stand-ins. Replace with the best 20–40 photos from the client archive (books, binding close-ups, branding kits, event materials, workspace, machines).
-- [ ] **CEO photo & bio** — `public/images/about/ceo-portrait.jpg` is a generated placeholder portrait of *Dr. Chiedozie Gideon Okeke*; bio copy on `/about` is a placeholder.
+- [x] **Logo** — client-supplied logo files integrated: JP mark in header (`public/images/logo-mark.png`), full light/dark lockups in footer (`logo-black.png` / `logo-white.png`), favicon derived from the mark (`app/icon.png`).
+- [x] **Hero image** — client-supplied hero (`public/images/hero-books.jpg`).
+- [x] **Portfolio photography** — real client work now in `public/images/work/` (6 published book covers, author-launch photo, campaign caps, press room).
+- [ ] **Remaining photography** — a few AI-generated stand-ins remain (`work/amara.jpg`, `work/plusfrica-report.jpg`, `textures/*`, `insights/cmyk.jpg`). Replace as more client photos arrive.
+- [x] **CEO photo** — real portrait of *Dr. Chiedozie Gideon Okeke* at `public/images/about/ceo-portrait.jpg`.
+- [ ] **CEO bio** — copy on `/about` is still placeholder text awaiting the client's approved bio.
 
 ## Content
-- [ ] **Testimonials** (`lib/data.ts` → `TESTIMONIALS`) — written placeholders. Replace with 5–8 real client quotes.
+- [ ] **Testimonials** (`lib/data.ts` → `TESTIMONIALS`) — first entry is a real client review (received via WhatsApp); the remaining three are placeholders. Replace as real quotes arrive; confirm the journal client's name for attribution.
 - [ ] **About stats** (`lib/data.ts` → `ABOUT_STATS`) — "500+ projects", "40+ authors" are plausible placeholders; confirm real numbers.
-- [ ] **Portfolio projects** (`lib/data.ts` → `PROJECTS`) — realistic sample projects. Replace with real case studies.
+- [x] **Portfolio projects** (`lib/data.ts` → `PROJECTS`) — now real client work: Women Without Walls, Brain Bank, The New You, From Novice to Top Selling Realtor, iLead, When Purpose Meets People, You're Easy to Ignore, and Campaign Caps. Project years currently default to 2026 — confirm per project.
 - [ ] **Company timeline dates** on `/about` — founding year of In-Grace Digital Resources Africa is approximate ("8+ years" per brief).
 
 ## Operations

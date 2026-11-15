@@ -18,7 +18,7 @@ export default function ServicesSnapshot() {
                 href={`/services#${service.id}`}
                 className="group flex h-full flex-col rounded-4xl bg-white p-3 pb-7 transition-transform duration-500 ease-out-expo hover:-translate-y-1.5 dark:bg-ink-soft"
               >
-                <div className="relative aspect-[16/10] overflow-hidden rounded-3xl bg-mist-soft dark:bg-ink">
+                <div className="relative aspect-[16/10] overflow-hidden rounded-3xl bg-mist-soft dark:bg-black">
                   <Image
                     src={service.image.src}
                     alt={service.image.alt}

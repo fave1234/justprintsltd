@@ -1,7 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import { NAV_LINKS, SITE } from "@/lib/site";
 import { SERVICES } from "@/lib/data";
-import Logo from "./Logo";
 import Icon from "./Icon";
 import NewsletterForm from "./NewsletterForm";
 
@@ -10,7 +10,26 @@ export default function Footer() {
     <footer className="border-t border-line-light bg-white dark:border-line-dark dark:bg-ink-soft">
       <div className="container-site grid gap-12 py-14 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr] lg:py-16">
         <div className="flex flex-col gap-5">
-          <Logo />
+          <Link
+            href="/"
+            aria-label="Justprints by PlusFrica — home"
+            className="w-fit"
+          >
+            <Image
+              src="/images/logo-black.png"
+              alt="Justprints by PlusFrica Ltd"
+              width={2000}
+              height={342}
+              className="h-7 w-auto dark:hidden"
+            />
+            <Image
+              src="/images/logo-white.png"
+              alt="Justprints by PlusFrica Ltd"
+              width={2000}
+              height={342}
+              className="hidden h-7 w-auto dark:block"
+            />
+          </Link>
           <div className="flex items-center gap-3">
             {SITE.socials.map((s) => (
               <a

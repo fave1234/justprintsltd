@@ -15,7 +15,7 @@ export default function WhyJustprints() {
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {WHY_POINTS.map((point, i) => (
             <Reveal key={point.title} delay={i * 0.08}>
-              <article className="group flex h-full flex-col gap-4 rounded-4xl bg-mist p-8 transition-all duration-500 ease-out-expo hover:-translate-y-1 dark:bg-ink">
+              <article className="group flex h-full flex-col gap-4 rounded-4xl bg-mist p-8 transition-all duration-500 ease-out-expo hover:-translate-y-1 dark:bg-black">
                 <Icon name={point.icon as "gem"} size={26} className="text-brand" />
                 <h3 className="font-display text-lg font-bold leading-snug text-ink dark:text-mist">
                   {point.title}

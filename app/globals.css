@@ -19,7 +19,7 @@
 
   body {
     /* -0.05em tracking is the text-face fingerprint — per brand reference */
-    @apply bg-mist font-sans tracking-[-0.05em] text-ink-mute antialiased dark:bg-ink dark:text-steel-light;
+    @apply bg-mist font-sans tracking-[-0.05em] text-ink-mute antialiased dark:bg-black dark:text-steel-light;
   }
 
   ::selection {
@@ -27,7 +27,7 @@
   }
 
   :focus-visible {
-    @apply outline-none ring-2 ring-brand ring-offset-2 ring-offset-mist dark:ring-offset-ink;
+    @apply outline-none ring-2 ring-brand ring-offset-2 ring-offset-mist dark:ring-offset-black;
   }
 
   h1, h2, h3, h4 {

@@ -39,7 +39,7 @@ export default function Header() {
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
           scrolled || open
-            ? "border-b border-line-light/80 bg-mist/90 backdrop-blur-xl dark:border-line-dark/80 dark:bg-ink/90"
+            ? "border-b border-line-light/80 bg-mist/90 backdrop-blur-xl dark:border-line-dark/80 dark:bg-black/90"
             : "border-b border-transparent bg-transparent"
         }`}
       >
@@ -97,7 +97,7 @@ export default function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 flex flex-col overflow-y-auto bg-mist pt-24 dark:bg-ink lg:hidden"
+            className="fixed inset-0 z-40 flex flex-col overflow-y-auto bg-mist pt-24 dark:bg-black lg:hidden"
           >
             <nav aria-label="Mobile" className="container-site flex flex-col pb-8">
               {[{ href: "/", label: "Home" }, ...LINKS].map((link, i) => (

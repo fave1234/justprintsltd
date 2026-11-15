@@ -50,7 +50,7 @@ export default function FeaturedWork() {
               href={`/work/${project.slug}`}
               className="group w-[78vw] max-w-[25rem] shrink-0 snap-start rounded-4xl bg-white p-3 pb-6 transition-transform duration-500 ease-out-expo hover:-translate-y-1.5 dark:bg-ink-soft sm:w-[25rem]"
             >
-              <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-mist-soft dark:bg-ink">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-mist-soft dark:bg-black">
                 <Image
                   src={project.cover.src}
                   alt={project.cover.alt}
